@@ -1,0 +1,65 @@
+<SelecLado3Page>:
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.2
+            font_size: 32
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            font_name: "righteous"
+            text: "SELECIONE O LADO"
+        Image:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            source: "icones/klt_car_front.png"
+        Button:
+            pos_hint: {"right": 0.5, "top": 0.75}
+            size_hint: 0.5, 0.5
+            bold: True
+            font_size: 16
+            color: 0.91, 0.94, 0.56, 1
+            background_color: 0.19, 0.42, 0.19, 0.25
+            background_down: "#e8f186"
+            font_name: "righteous"
+            text: "ESQUERDO"
+            on_release: app.mudar_tela('selecandar3esqpage')
+            id: botao_carro_esquerdo
+        Button:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 0.5, 0.5
+            bold: True
+            font_size: 16
+            color: 0.91, 0.94, 0.56, 1
+            background_color: 0.19, 0.42, 0.19, 0.25
+            background_down: "#e8f186"
+            font_name: "righteous"
+            text: "DIREITO"
+            on_release: app.mudar_tela('selecandar3dirpage')
+            id: botao_carro_direito
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.2075}
+            size_hint: 0.15, 0.05
+            on_release: app.mudar_tela('principalpage')
+
+        Label:
+            pos_hint: {"right": 1, "top": 0.285}
+            size_hint: 1, 0.2
+            font_size: 16
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: "middle"
+            text: 'CARRINHO SELECIONADO: 3º'

@@ -1,0 +1,110 @@
+<ResSelecLado2Page>
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.2
+            font_size: 32
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            font_name: "righteous"
+            valign: 'middle'
+            text: "LADOS DISPONÍVEIS"
+        Image:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            source: "icones/klt_car_front.png"
+
+        # botao_esq
+        Button:
+            pos_hint: {"right": 0.4, "top": 0.75}
+            size_hint: 0.25, 0.5
+            bold: True
+            font_size: 16
+            color: 0.91, 0.94, 0.56, 1
+            background_color: 0.19, 0.42, 0.19, 0.25
+            background_down: "#e8f186"
+            text: "ESQUERDO"
+            on_release: app.mudar_tela('resladoesq2page')
+            id: botao_carro_esquerdo
+
+        # botao_dir
+        Button:
+            pos_hint: {"right": 0.85, "top": 0.75}
+            size_hint: 0.25, 0.5
+            bold: True
+            font_size: 16
+            color: 0.91, 0.94, 0.56, 1
+            background_color: 0.19, 0.42, 0.19, 0.25
+            background_down: "#e8f186"
+            text: "DIREITO"
+            on_release: app.mudar_tela('resladodir2page')
+            id: botao_carro_direito
+
+        # image lado_dir check
+        Image:
+            pos_hint: {"right": 1.225, "top": 0.75}
+            size_hint: 1, 1
+            id: lado_dir_check
+            source: root.check_dir
+        # image lado_esq check
+        Image:
+            pos_hint: {"right": 0.775, "top": 0.75}
+            size_hint: 1, 1
+            id: lado_esq_check
+            source: root.check_esq
+
+        # local
+        Label:
+            pos_hint: {"right": 1, "top": 0.285}
+            size_hint: 1, 0.2
+            font_size: 20
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            text: root.label_parada
+            id: label_local_res
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.2075}
+            size_hint: 0.15, 0.05
+            on_release: root.voltar_rota()
+
+        # carrinho
+        Label:
+            pos_hint: {"right": 1, "top": 0.225}
+            size_hint: 1, 0.2
+            font_size: 20
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            text: 'CARRINHO: 2º'
+            id: label_carrinho_res
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.1475}
+            size_hint: 0.15, 0.05
+            on_release: root.voltar_carrinho()

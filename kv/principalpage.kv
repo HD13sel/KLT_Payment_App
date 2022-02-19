@@ -1,0 +1,103 @@
+<PrincipalPage>:
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 1, "top": 0.80}
+            size_hint: 1, 0.2
+            font_size: 60
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            font_name: "righteous"
+            valign: 'middle'
+            text: "PAGAMENTO\n        KLT"
+
+        Label:
+            pos_hint: {"right": 1, "top": 0.6}
+            size_hint: 1, 0.2
+            bold: True
+            font_size: 24
+            font_name: "righteous"
+            color: 0.91, 0.94, 0.56, 1
+            text: "SELECIONE A ORDEM DO CARRINHO"
+
+        # carros_scroll
+        ScrollView:
+            pos_hint: {"right": 1, "top": 0.4}
+            size_hint_x: 1
+            do_scroll_x: True
+            do_scroll_y: False
+            id: carros_scroll
+            GridLayout:
+                size:(0.25, 1)
+                size_hint_x: None
+                size_hint_y: 0.45
+                rows: 2
+                width: self.minimum_width
+                col_default_width: '150dp'
+                col_force_default: True
+                ImageButton:
+                    source: "icones/rebc.png"
+                ImageButton:
+                    text: '1'
+                    id: carro_1
+                    source: "icones/klt_car_right.png"
+                    on_release: app.mudar_tela('seleclado1page')
+                ImageButton:
+                    text: '2'
+                    id: carro_2
+                    source: "icones/klt_car_right.png"
+                    on_release: app.mudar_tela('seleclado2page')
+                ImageButton:
+                    text: '3'
+                    id: carro_3
+                    source: "icones/klt_car_right.png"
+                    on_release: app.mudar_tela('seleclado3page')
+                ImageButton:
+                    text: '4'
+                    id: carro_4
+                    source: "icones/klt_car_right.png"
+                    on_release: app.mudar_tela('seleclado4page')
+                ImageButton:
+                    text: '5'
+                    id: carro_5
+                    source: "icones/klt_car_right.png"
+                    on_release: app.mudar_tela('seleclado5page')
+                Label:
+                    font_size: 16
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "REBOCADOR"
+                Label:
+                    font_size: 32
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "1º"
+                Label:
+                    font_size: 32
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "2º"
+                Label:
+                    font_size: 32
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "3º"
+                Label:
+                    font_size: 32
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "4º"
+                Label:
+                    font_size: 32
+                    color: 0.91, 0.94, 0.56, 1
+                    bold: True
+                    text: "5º"
+
+
+        Label:
+            pos_hint: {"right": 1.10, "top": 0.715}
+            size_hint: 1, 0.2
+            bold: True
+            color: 0.91, 0.94, 0.56, 1
+            text: "v1.0"
+
+

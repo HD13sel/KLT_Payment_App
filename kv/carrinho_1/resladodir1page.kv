@@ -1,0 +1,590 @@
+<ResLadoDir1Page>
+    FloatLayout:
+        FloatLayout:
+            Image:
+                pos_hint: {"right": 1, "top": 0.9}
+                size_hint: 1, 0.75
+                allow_stretch: True
+                source: "icones/klt_car_right.png"
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.5
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.1
+            font_size: 24
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            font_name: "righteous"
+            text: "RESULTADOS"
+
+        # local
+        Label:
+            pos_hint: {"right": 1, "top": 0.285}
+            size_hint: 1, 0.2
+            font_size: 20
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            text: root.label_parada
+            id: label_local_res
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.2075}
+            size_hint: 0.15, 0.05
+            on_release: root.voltar_rota()
+
+        # carrinho
+        Label:
+            pos_hint: {"right": 1, "top": 0.225}
+            size_hint: 1, 0.2
+            font_size: 20
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            text: 'CARRINHO: 1º'
+            id: label_carrinho_res
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.1475}
+            size_hint: 0.15, 0.05
+            on_release: root.voltar_res_carrinho()
+
+        # lado sel
+        Label:
+            pos_hint: {"right": 1, "top": 0.165}
+            size_hint: 1, 0.2
+            font_size: 20
+            color: 0.91, 0.94, 0.56, 1
+            bold: True
+            valign: 'middle'
+            text: 'LADO: DIREITO'
+            id: label_carrinho_res
+        Button:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'VOLTAR'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.3, "top": 0.0875}
+            size_hint: 0.15, 0.05
+            on_release: root.voltar_lado()
+
+        # andares
+        Label:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: '5º'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.25, "top": 0.825}
+            size_hint: 0.065, 0.05
+        Label:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: '4º'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.25, "top": 0.70}
+            size_hint: 0.065, 0.05
+        Label:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: '3º'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.25, "top": 0.575}
+            size_hint: 0.065, 0.05
+        Label:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: '2º'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.25, "top": 0.45}
+            size_hint: 0.065, 0.05
+        Label:
+            canvas.before:
+                Color:
+                    rgba: (0.91, 0.94, 0.56, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: '1º'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 0, 0, 0, 1
+            pos_hint: {"right": 0.25, "top": 0.325}
+            size_hint: 0.065, 0.05
+
+
+        # images checks
+
+        # 5 andar
+
+        # check_a_5_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_a_5
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'A'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.35, "top": 0.825}
+            size_hint: 0.065, 0.075
+            id: check_a_5_ld
+            on_release: root.check_posicao('A5', 'a')
+        # check_b_5_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_b_5
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'B'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.475, "top": 0.85}
+            size_hint: 0.065, 0.075
+            id: check_b_5_ld
+            on_press: root.check_posicao('A5', 'b')
+        # check_c_5_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_c_5
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'C'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.60, "top": 0.875}
+            size_hint: 0.065, 0.075
+            id: check_c_5_ld
+            on_press: root.check_posicao('A5', 'c')
+        # check_d_5_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_d_5
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'D'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.725, "top": 0.9}
+            size_hint: 0.065, 0.075
+            id: check_d_5_ld
+            on_press: root.check_posicao('A5', 'd')
+
+
+        # 4 andar
+
+        # check_a_4_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_a_4
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'A'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.35, "top": 0.70}
+            size_hint: 0.065, 0.075
+            id: check_a_4_ld
+            on_release: root.check_posicao('A4', 'a')
+        # check_b_4_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_b_4
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'B'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.475, "top": 0.725}
+            size_hint: 0.065, 0.075
+            id: check_b_4_ld
+            on_press: root.check_posicao('A4', 'b')
+        # check_c_4_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_c_4
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'C'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.60, "top": 0.75}
+            size_hint: 0.065, 0.075
+            id: check_c_4_ld
+            on_press: root.check_posicao('A4', 'c')
+        # check_d_4_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_d_4
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'D'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.725, "top": 0.775}
+            size_hint: 0.065, 0.075
+            id: check_d_4_ld
+            on_press: root.check_posicao('A4', 'd')
+
+
+
+        # 3 andar
+
+        # check_a_3_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_a_3
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'A'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.35, "top": 0.575}
+            size_hint: 0.065, 0.075
+            id: check_a_3_ld
+            on_release: root.check_posicao('A3', 'a')
+        # check_b_3_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_b_3
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'B'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.475, "top": 0.60}
+            size_hint: 0.065, 0.075
+            id: check_b_3_ld
+            on_press: root.check_posicao('A3', 'b')
+        # check_c_3_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_c_3
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'C'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.60, "top": 0.625}
+            size_hint: 0.065, 0.075
+            id: check_c_3_ld
+            on_press: root.check_posicao('A3', 'c')
+        # check_d_3_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_d_3
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'D'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.725, "top": 0.65}
+            size_hint: 0.065, 0.075
+            id: check_d_3_ld
+            on_press: root.check_posicao('A3', 'd')
+
+        # 2 andar
+
+        # check_a_2_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_a_2
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'A'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.35, "top": 0.45}
+            size_hint: 0.065, 0.075
+            id: check_a_2_ld
+            on_release: root.check_posicao('A2', 'a')
+        # check_b_2_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_b_2
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'B'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.475, "top": 0.475}
+            size_hint: 0.065, 0.075
+            id: check_b_2_ld
+            on_press: root.check_posicao('A2', 'b')
+        # check_c_2_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_c_2
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'C'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.60, "top": 0.5}
+            size_hint: 0.065, 0.075
+            id: check_c_2_ld
+            on_press: root.check_posicao('A2', 'c')
+        # check_d_2_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_d_2
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'D'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.725, "top": 0.525}
+            size_hint: 0.065, 0.075
+            id: check_d_2_ld
+            on_press: root.check_posicao('A2', 'd')
+
+        # 1 andar
+
+        # check_a_1_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_a_1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'A'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.35, "top": 0.325}
+            size_hint: 0.065, 0.075
+            id: check_a_1_ld
+            on_release: root.check_posicao('A1', 'a')
+        # check_b_1_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_b_1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'B'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.475, "top": 0.35}
+            size_hint: 0.065, 0.075
+            id: check_b_1_ld
+            on_press: root.check_posicao('A1', 'b')
+        # check_c_1_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_c_1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'C'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.60, "top": 0.375}
+            size_hint: 0.065, 0.075
+            id: check_c_1_ld
+            on_press: root.check_posicao('A1', 'c')
+        # check_d_1_ld
+        Button:
+            canvas.before:
+                Color:
+                    rgba: root.cor_d_1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
+            text: 'D'
+            font_name: "righteous"
+            bold: True
+            font_size: 16
+            color: 1, 1, 1, 1
+            pos_hint: {"right": 0.725, "top": 0.4}
+            size_hint: 0.065, 0.075
+            id: check_d_1_ld
+            on_press: root.check_posicao('A1', 'd')

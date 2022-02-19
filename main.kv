@@ -1,0 +1,389 @@
+#:include kv/principalpage.kv
+#:include kv/carrinho_1/seleclado1page.kv
+#:include kv/carrinho_2/seleclado2page.kv
+#:include kv/carrinho_3/seleclado3page.kv
+#:include kv/carrinho_4/seleclado4page.kv
+#:include kv/carrinho_5/seleclado5page.kv
+
+#:include kv/carrinho_1/selecandar1esqpage.kv
+#:include kv/carrinho_1/selecandar1dirpage.kv
+#:include kv/carrinho_2/selecandar2esqpage.kv
+#:include kv/carrinho_2/selecandar2dirpage.kv
+#:include kv/carrinho_3/selecandar3esqpage.kv
+#:include kv/carrinho_3/selecandar3dirpage.kv
+#:include kv/carrinho_4/selecandar4esqpage.kv
+#:include kv/carrinho_4/selecandar4dirpage.kv
+#:include kv/carrinho_5/selecandar5esqpage.kv
+#:include kv/carrinho_5/selecandar5dirpage.kv
+
+#:include kv/carrinho_1/sel_posicao_dir/selecposicao1dirA1.kv
+#:include kv/carrinho_1/sel_posicao_dir/selecposicao1dirA2.kv
+#:include kv/carrinho_1/sel_posicao_dir/selecposicao1dirA3.kv
+#:include kv/carrinho_1/sel_posicao_dir/selecposicao1dirA4.kv
+#:include kv/carrinho_1/sel_posicao_dir/selecposicao1dirA5.kv
+#:include kv/carrinho_1/sel_posicao_esq/selecposicao1esqA1.kv
+#:include kv/carrinho_1/sel_posicao_esq/selecposicao1esqA2.kv
+#:include kv/carrinho_1/sel_posicao_esq/selecposicao1esqA3.kv
+#:include kv/carrinho_1/sel_posicao_esq/selecposicao1esqA4.kv
+#:include kv/carrinho_1/sel_posicao_esq/selecposicao1esqA5.kv
+#:include kv/carrinho_1/resseleclado1page.kv
+#:include kv/carrinho_1/resladodir1page.kv
+#:include kv/carrinho_1/resladoesq1page.kv
+
+#:include kv/carrinho_2/sel_posicao_dir/selecposicao2dirA1.kv
+#:include kv/carrinho_2/sel_posicao_dir/selecposicao2dirA2.kv
+#:include kv/carrinho_2/sel_posicao_dir/selecposicao2dirA3.kv
+#:include kv/carrinho_2/sel_posicao_dir/selecposicao2dirA4.kv
+#:include kv/carrinho_2/sel_posicao_dir/selecposicao2dirA5.kv
+#:include kv/carrinho_2/sel_posicao_esq/selecposicao2esqA1.kv
+#:include kv/carrinho_2/sel_posicao_esq/selecposicao2esqA2.kv
+#:include kv/carrinho_2/sel_posicao_esq/selecposicao2esqA3.kv
+#:include kv/carrinho_2/sel_posicao_esq/selecposicao2esqA4.kv
+#:include kv/carrinho_2/sel_posicao_esq/selecposicao2esqA5.kv
+#:include kv/carrinho_2/resseleclado2page.kv
+#:include kv/carrinho_2/resladodir2page.kv
+#:include kv/carrinho_2/resladoesq2page.kv
+
+#:include kv/carrinho_3/sel_posicao_dir/selecposicao3dirA1.kv
+#:include kv/carrinho_3/sel_posicao_dir/selecposicao3dirA2.kv
+#:include kv/carrinho_3/sel_posicao_dir/selecposicao3dirA3.kv
+#:include kv/carrinho_3/sel_posicao_dir/selecposicao3dirA4.kv
+#:include kv/carrinho_3/sel_posicao_dir/selecposicao3dirA5.kv
+#:include kv/carrinho_3/sel_posicao_esq/selecposicao3esqA1.kv
+#:include kv/carrinho_3/sel_posicao_esq/selecposicao3esqA2.kv
+#:include kv/carrinho_3/sel_posicao_esq/selecposicao3esqA3.kv
+#:include kv/carrinho_3/sel_posicao_esq/selecposicao3esqA4.kv
+#:include kv/carrinho_3/sel_posicao_esq/selecposicao3esqA5.kv
+#:include kv/carrinho_3/resseleclado3page.kv
+#:include kv/carrinho_3/resladodir3page.kv
+#:include kv/carrinho_3/resladoesq3page.kv
+
+#:include kv/carrinho_4/sel_posicao_dir/selecposicao4dirA1.kv
+#:include kv/carrinho_4/sel_posicao_dir/selecposicao4dirA2.kv
+#:include kv/carrinho_4/sel_posicao_dir/selecposicao4dirA3.kv
+#:include kv/carrinho_4/sel_posicao_dir/selecposicao4dirA4.kv
+#:include kv/carrinho_4/sel_posicao_dir/selecposicao4dirA5.kv
+#:include kv/carrinho_4/sel_posicao_esq/selecposicao4esqA1.kv
+#:include kv/carrinho_4/sel_posicao_esq/selecposicao4esqA2.kv
+#:include kv/carrinho_4/sel_posicao_esq/selecposicao4esqA3.kv
+#:include kv/carrinho_4/sel_posicao_esq/selecposicao4esqA4.kv
+#:include kv/carrinho_4/sel_posicao_esq/selecposicao4esqA5.kv
+#:include kv/carrinho_4/resseleclado4page.kv
+#:include kv/carrinho_4/resladodir4page.kv
+#:include kv/carrinho_4/resladoesq4page.kv
+
+#:include kv/carrinho_5/sel_posicao_dir/selecposicao5dirA1.kv
+#:include kv/carrinho_5/sel_posicao_dir/selecposicao5dirA2.kv
+#:include kv/carrinho_5/sel_posicao_dir/selecposicao5dirA3.kv
+#:include kv/carrinho_5/sel_posicao_dir/selecposicao5dirA4.kv
+#:include kv/carrinho_5/sel_posicao_dir/selecposicao5dirA5.kv
+#:include kv/carrinho_5/sel_posicao_esq/selecposicao5esqA1.kv
+#:include kv/carrinho_5/sel_posicao_esq/selecposicao5esqA2.kv
+#:include kv/carrinho_5/sel_posicao_esq/selecposicao5esqA3.kv
+#:include kv/carrinho_5/sel_posicao_esq/selecposicao5esqA4.kv
+#:include kv/carrinho_5/sel_posicao_esq/selecposicao5esqA5.kv
+#:include kv/carrinho_5/resseleclado5page.kv
+#:include kv/carrinho_5/resladodir5page.kv
+#:include kv/carrinho_5/resladoesq5page.kv
+
+#:include kv/escolharotapage.kv
+#:include kv/popup.kv
+#:include kv/rota01page.kv
+#:include kv/rota0302page.kv
+#:include kv/rota04page.kv
+#:include kv/rota05page.kv
+#:include kv/rota0607page.kv
+#:include kv/rota08page.kv
+#:include kv/rescarrinhopage.kv
+#:import utils kivy.utils
+#:import Factory kivy.factory.Factory
+
+FloatLayout:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "icones/background.png"
+    ScreenManager:
+        pos_hint: {"right": 1, "top": 1}
+        size_hint: 1, 1
+        id: screen_manager
+        PrincipalPage:
+            name: "principalpage"
+            id: principalpage
+        SelecLado1Page:
+            name: "seleclado1page"
+            id: seleclado1page
+        SelecLado2Page:
+            name: "seleclado2page"
+            id: seleclado2page
+        SelecLado3Page:
+            name: "seleclado3page"
+            id: seleclado3page
+        SelecLado4Page:
+            name: "seleclado4page"
+            id: seleclado4page
+        SelecLado5Page:
+            name: "seleclado5page"
+            id: seleclado5page
+
+        SelecAndar1EsqPage:
+            name: "selecandar1esqpage"
+            id: selecandar1esqpage
+        SelecAndar1DirPage:
+            name: "selecandar1dirpage"
+            id: selecandar1dirpage
+        SelecAndar2EsqPage:
+            name: "selecandar2esqpage"
+            id: selecandar2esqpage
+        SelecAndar2DirPage:
+            name: "selecandar2dirpage"
+            id: selecandar2dirpage
+        SelecAndar3EsqPage:
+            name: "selecandar3esqpage"
+            id: selecandar3esqpage
+        SelecAndar3DirPage:
+            name: "selecandar3dirpage"
+            id: selecandar3dirpage
+        SelecAndar4EsqPage:
+            name: "selecandar4esqpage"
+            id: selecandar4esqpage
+        SelecAndar4DirPage:
+            name: "selecandar4dirpage"
+            id: selecandar4dirpage
+        SelecAndar5EsqPage:
+            name: "selecandar5esqpage"
+            id: selecandar5esqpage
+        SelecAndar5DirPage:
+            name: "selecandar5dirpage"
+            id: selecandar5dirpage
+
+        SelecPosicao1EsqA1Page:
+            name: "selecposicao1esqA1"
+            id: selecposicao1esqA1
+        SelecPosicao1DirA1Page:
+            name: "selecposicao1dirA1"
+            id: selecposicao1dirA1
+        SelecPosicao1EsqA2Page:
+            name: "selecposicao1esqA2"
+            id: selecposicao1esqA2
+        SelecPosicao1DirA2Page:
+            name: "selecposicao1dirA2"
+            id: selecposicao1dirA2
+        SelecPosicao1EsqA3Page:
+            name: "selecposicao1esqA3"
+            id: selecposicao1esqA3
+        SelecPosicao1DirA3Page:
+            name: "selecposicao1dirA3"
+            id: selecposicao1dirA3
+        SelecPosicao1EsqA4Page:
+            name: "selecposicao1esqA4"
+            id: selecposicao1esqA4
+        SelecPosicao1DirA4Page:
+            name: "selecposicao1dirA4"
+            id: selecposicao1dirA4
+        SelecPosicao1EsqA5Page:
+            name: "selecposicao1esqA5"
+            id: selecposicao1esqA5
+        SelecPosicao1DirA5Page:
+            name: "selecposicao1dirA5"
+            id: selecposicao1dirA5
+
+        SelecPosicao2EsqA1Page:
+            name: "selecposicao2esqA1"
+            id: selecposicao2esqA1
+        SelecPosicao2DirA1Page:
+            name: "selecposicao2dirA1"
+            id: selecposicao2dirA1
+        SelecPosicao2EsqA2Page:
+            name: "selecposicao2esqA2"
+            id: selecposicao2esqA2
+        SelecPosicao2DirA2Page:
+            name: "selecposicao2dirA2"
+            id: selecposicao2dirA2
+        SelecPosicao2EsqA3Page:
+            name: "selecposicao2esqA3"
+            id: selecposicao2esqA3
+        SelecPosicao2DirA3Page:
+            name: "selecposicao2dirA3"
+            id: selecposicao2dirA3
+        SelecPosicao2EsqA4Page:
+            name: "selecposicao2esqA4"
+            id: selecposicao2esqA4
+        SelecPosicao2DirA4Page:
+            name: "selecposicao2dirA4"
+            id: selecposicao2dirA4
+        SelecPosicao2EsqA5Page:
+            name: "selecposicao2esqA5"
+            id: selecposicao2esqA5
+        SelecPosicao2DirA5Page:
+            name: "selecposicao2dirA5"
+            id: selecposicao2dirA5
+
+        SelecPosicao3EsqA1Page:
+            name: "selecposicao3esqA1"
+            id: selecposicao3esqA1
+        SelecPosicao3DirA1Page:
+            name: "selecposicao3dirA1"
+            id: selecposicao3dirA1
+        SelecPosicao3EsqA2Page:
+            name: "selecposicao3esqA2"
+            id: selecposicao3esqA2
+        SelecPosicao3DirA2Page:
+            name: "selecposicao3dirA2"
+            id: selecposicao3dirA2
+        SelecPosicao3EsqA3Page:
+            name: "selecposicao3esqA3"
+            id: selecposicao3esqA3
+        SelecPosicao3DirA3Page:
+            name: "selecposicao3dirA3"
+            id: selecposicao3dirA3
+        SelecPosicao3EsqA4Page:
+            name: "selecposicao3esqA4"
+            id: selecposicao3esqA4
+        SelecPosicao3DirA4Page:
+            name: "selecposicao3dirA4"
+            id: selecposicao3dirA4
+        SelecPosicao3EsqA5Page:
+            name: "selecposicao3esqA5"
+            id: selecposicao3esqA5
+        SelecPosicao3DirA5Page:
+            name: "selecposicao3dirA5"
+            id: selecposicao3dirA5
+
+        SelecPosicao4EsqA1Page:
+            name: "selecposicao4esqA1"
+            id: selecposicao4esqA1
+        SelecPosicao4DirA1Page:
+            name: "selecposicao4dirA1"
+            id: selecposicao4dirA1
+        SelecPosicao4EsqA2Page:
+            name: "selecposicao4esqA2"
+            id: selecposicao4esqA2
+        SelecPosicao4DirA2Page:
+            name: "selecposicao4dirA2"
+            id: selecposicao4dirA2
+        SelecPosicao4EsqA3Page:
+            name: "selecposicao4esqA3"
+            id: selecposicao4esqA3
+        SelecPosicao4DirA3Page:
+            name: "selecposicao4dirA3"
+            id: selecposicao4dirA3
+        SelecPosicao4EsqA4Page:
+            name: "selecposicao4esqA4"
+            id: selecposicao4esqA4
+        SelecPosicao4DirA4Page:
+            name: "selecposicao4dirA4"
+            id: selecposicao4dirA4
+        SelecPosicao4EsqA5Page:
+            name: "selecposicao4esqA5"
+            id: selecposicao4esqA5
+        SelecPosicao4DirA5Page:
+            name: "selecposicao4dirA5"
+            id: selecposicao4dirA5
+
+        SelecPosicao5EsqA1Page:
+            name: "selecposicao5esqA1"
+            id: selecposicao5esqA1
+        SelecPosicao5DirA1Page:
+            name: "selecposicao5dirA1"
+            id: selecposicao5dirA1
+        SelecPosicao5EsqA2Page:
+            name: "selecposicao5esqA2"
+            id: selecposicao5esqA2
+        SelecPosicao5DirA2Page:
+            name: "selecposicao5dirA2"
+            id: selecposicao5dirA2
+        SelecPosicao5EsqA3Page:
+            name: "selecposicao5esqA3"
+            id: selecposicao5esqA3
+        SelecPosicao5DirA3Page:
+            name: "selecposicao5dirA3"
+            id: selecposicao5dirA3
+        SelecPosicao5EsqA4Page:
+            name: "selecposicao5esqA4"
+            id: selecposicao5esqA4
+        SelecPosicao5DirA4Page:
+            name: "selecposicao5dirA4"
+            id: selecposicao5dirA4
+        SelecPosicao5EsqA5Page:
+            name: "selecposicao5esqA5"
+            id: selecposicao5esqA5
+        SelecPosicao5DirA5Page:
+            name: "selecposicao5dirA5"
+            id: selecposicao5dirA5
+
+        ResSelecLado1Page:
+            name: "resseleclado1page"
+            id: resseleclado1page
+        ResLadoDir1Page:
+            name: "resladodir1page"
+            id: resladodir1page
+        ResLadoEsq1Page:
+            name: "resladoesq1page"
+            id: resladoesq1page
+
+        ResSelecLado2Page:
+            name: "resseleclado2page"
+            id: resseleclado2page
+        ResLadoDir2Page:
+            name: "resladodir2page"
+            id: resladodir2page
+        ResLadoEsq2Page:
+            name: "resladoesq2page"
+            id: resladoesq2page
+
+        ResSelecLado3Page:
+            name: "resseleclado3page"
+            id: resseleclado3page
+        ResLadoDir3Page:
+            name: "resladodir3page"
+            id: resladodir3page
+        ResLadoEsq3Page:
+            name: "resladoesq3page"
+            id: resladoesq3page
+
+        ResSelecLado4Page:
+            name: "resseleclado4page"
+            id: resseleclado4page
+        ResLadoDir4Page:
+            name: "resladodir4page"
+            id: resladodir4page
+        ResLadoEsq4Page:
+            name: "resladoesq4page"
+            id: resladoesq4page
+
+        ResSelecLado5Page:
+            name: "resseleclado5page"
+            id: resseleclado5page
+        ResLadoDir5Page:
+            name: "resladodir5page"
+            id: resladodir5page
+        ResLadoEsq5Page:
+            name: "resladoesq5page"
+            id: resladoesq5page
+
+        EscolhaRotaPage:
+            name: "escolharotapage"
+            id: escolharotapage
+        Rota01Page:
+            name: "rota01page"
+            id: rota01page
+        Rota0302Page:
+            name: "rota0302page"
+            id: rota0302page
+        Rota04Page:
+            name: "rota04page"
+            id: rota04page
+        Rota05Page:
+            name: "rota05page"
+            id: rota05page
+        Rota0607Page:
+            name: "rota0607page"
+            id: rota0607page
+        Rota08Page:
+            name: "rota08page"
+            id: rota08page
+        ResCarrinhoPage:
+            name: "rescarrinhopage"
+            id: rescarrinhopage

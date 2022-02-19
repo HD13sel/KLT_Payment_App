@@ -1,0 +1,1950 @@
+# confirmar
+<Confirmar>
+    title: 'CONFIRMAÇÃO'
+    title_align: 'center'
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.85
+            valign: 'middle'
+            text: "DESEJA CONFIRMAR TODOS OS DADOS REGISTRADOS?"
+            font_size: 14
+        Button:
+            pos_hint: {"right": 0.5, "top": 0.2}
+            size_hint: 0.5, 0.15
+            text: "SIM"
+            bold: True
+            background_color: 0.44, 0.93, 0.48, 1
+            background_down: "#e8f186"
+            on_release: app.mudar_tela('escolharotapage')
+            on_press: root.dismiss()
+        Button:
+            pos_hint: {"right": 1, "top": 0.2}
+            size_hint: 0.5, 0.15
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'NÃO'
+            bold: True
+            on_press: root.dismiss()
+# voltar
+<Voltar>
+    title: "DESEJA VOLTAR?"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 1, "top": 1}
+            size_hint: 1, 0.85
+            valign: 'middle'
+            text: "TODOS SEUS DADOS REGISTRADOS SERÃO RESETADOS!"
+            font_size: 14
+        Button:
+            pos_hint: {"right": 0.5, "top": 0.2}
+            size_hint: 0.5, 0.15
+            text: "SIM"
+            bold: True
+            background_color: 0.44, 0.93, 0.48, 1
+            background_down: "#e8f186"
+            on_release: root.voltar_botao()
+            on_press: root.dismiss()
+        Button:
+            pos_hint: {"right": 1, "top": 0.2}
+            size_hint: 0.5, 0.15
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'NÃO'
+            bold: True
+            on_press: root.dismiss()
+
+# sel_regiao
+<SelLocalRegiao>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    GridLayout:
+        cols: 2
+        rows: 4
+        Button:
+            text: "C81"
+            bold: True
+            background_color: 0.92, 0.91, 0.38, 1
+            background_down: "#e8f186"
+            on_press: root.dismiss()
+            on_release: root.c81()
+            id: btn_sellocal_c81
+        Button:
+            text: "C82"
+            bold: True
+            background_color: 0.52, 0.93, 0.44, 1
+            background_down: "#c4ed71"
+            on_release: root.c82()
+            on_press: root.dismiss()
+            id: btn_sellocal_c82
+        Button:
+            text: "SOLDA"
+            bold: True
+            background_color: 0.788, 0.788, 0.788, 1
+            background_down: "#cecece"
+            on_release: root.solda()
+            on_press: root.dismiss()
+            id: btn_sellocal_solda
+        Button:
+            text: "OUTROS"
+            bold: True
+            background_color: 0.70, 0.67, 0.76, 1
+            background_down: "#8b7ea3"
+            on_release: root.outros()
+            on_press: root.dismiss()
+            id: btn_sellocal_outros
+        FloatLayout:
+            Button:
+                pos_hint: {"right": 0.5, "top": 0.5}
+                size_hint: 0.5, 0.5
+                background_color: 0.68, 0.70, 0.75, 1
+                background_down: "#cecece"
+                text: 'APAGAR'
+                bold: True
+                on_release: root.apagar()
+                on_press: root.dismiss()
+            Button:
+                pos_hint: {"right": 1.35, "top": 0.5}
+                size_hint: 0.75, 0.5
+                background_color: 0.92, 0.48, 0.44, 1
+                background_down: "#e8f186"
+                text: 'CANCELAR'
+                bold: True
+                on_press: root.dismiss()
+
+
+# c81
+<SelLocalRotasC81>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    GridLayout:
+        cols: 2
+        rows: 6
+
+        Label:
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            text: "C81"
+            bold: True
+
+        Button:
+            text: "R01"
+            bold: True
+            background_color: 0.92, 0.91, 0.38, 1
+            background_down: "#e8f186"
+            on_release: root.c81_r01()
+            on_press: root.dismiss()
+            id: btn_c81_r01
+        Button:
+            text: "R02"
+            bold: True
+            background_color: 0.92, 0.91, 0.38, 1
+            background_down: "#e8f186"
+            on_release: root.c81_r02()
+            on_press: root.dismiss()
+            id: btn_c81_r02
+        Button:
+            text: "R03"
+            bold: True
+            background_color: 0.92, 0.91, 0.38, 1
+            background_down: "#e8f186"
+            on_release: root.c81_r03()
+            on_press: root.dismiss()
+            id: btn_c81_r03
+        Button:
+            text: "R04"
+            bold: True
+            background_color: 0.92, 0.91, 0.38, 1
+            background_down: "#e8f186"
+            on_release: root.c81_r04()
+            on_press: root.dismiss()
+            id: btn_c81_r04
+        FloatLayout:
+            Button:
+                pos_hint: {"right": 1.45, "top": 0.5}
+                size_hint: 1, 0.5
+                background_color: 0.92, 0.48, 0.44, 1
+                background_down: "#e8f186"
+                text: 'VOLTAR'
+                bold: True
+                on_release: root.voltar_c81()
+                on_press: root.dismiss()
+                id: btn_c81_back
+
+# c82
+<SelLocalRotasC82>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    GridLayout:
+        cols: 2
+        rows: 6
+
+        Label:
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            text: "C82"
+            bold: True
+
+        Button:
+            text: "R04"
+            bold: True
+            background_color: 0.52, 0.93, 0.44, 1
+            background_down: "#e8f186"
+            on_release: root.c82_r04()
+            on_press: root.dismiss()
+            id: btn_c82_r04
+        Button:
+            text: "R05"
+            bold: True
+            background_color: 0.52, 0.93, 0.44, 1
+            background_down: "#e8f186"
+            on_release: root.c82_r05()
+            on_press: root.dismiss()
+            id: btn_c82_r05
+        Button:
+            text: "R06"
+            bold: True
+            background_color: 0.52, 0.93, 0.44, 1
+            background_down: "#e8f186"
+            on_release: root.c82_r06()
+            on_press: root.dismiss()
+            id: btn_c82_r06
+        Button:
+            text: "R07"
+            bold: True
+            background_color: 0.52, 0.93, 0.44, 1
+            background_down: "#e8f186"
+            on_release: root.c82_r07()
+            on_press: root.dismiss()
+            id: btn_c82_r07
+        FloatLayout:
+            Button:
+                pos_hint: {"right": 1.45, "top": 0.5}
+                size_hint: 1, 0.5
+                background_color: 0.92, 0.48, 0.44, 1
+                background_down: "#e8f186"
+                text: 'VOLTAR'
+                bold: True
+                on_release: root.voltar_c82()
+                on_press: root.dismiss()
+                id: btn_c82_back
+
+# solda
+<SelLocalRotasSolda>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.75, "top": 1}
+            size_hint: 1, 0.2
+            text: "ENDEREÇO:"
+            bold: True
+
+        Label:
+            pos_hint: {"right": 1.20, "top": 1}
+            size_hint: 1, 0.2
+            text: "SO"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.825}
+            size_hint_x: 1
+            size_hint_y: 0.65
+            rows: 4
+            # scroll_centenas
+            ScrollView:
+                size_hint_x: 1
+                size_hint_y: 0.15
+                do_scroll_x: True
+                do_scroll_y: False
+                GridLayout:
+                    size:(0.25, 1)
+                    size_hint_x: None
+                    size_hint_y: 1
+                    rows: 1
+                    width: self.minimum_width
+                    col_default_width: '75dp'
+                    col_force_default: True
+
+                    # btn so_0100
+                    Button:
+                        text: "0100"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0100)
+                        on_press: root.dismiss()
+                        id: btn_so_0100
+
+                    # btn so_01a0
+                    Button:
+                        text: "01A0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_01a0)
+                        on_press: root.dismiss()
+                        id: btn_so_01a0
+
+                    # btn so_01e0
+                    Button:
+                        text: "01E0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_01e0)
+                        on_press: root.dismiss()
+                        id: btn_so_01e0
+
+                    # btn so_01d0
+                    Button:
+                        text: "01D0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_01d0)
+                        on_press: root.dismiss()
+                        id: btn_so_01d0
+
+                    # btn so_0200
+                    Button:
+                        text: "0200"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0200)
+                        on_press: root.dismiss()
+                        id: btn_so_0200
+
+                    # btn so_02a0
+                    Button:
+                        text: "02A0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_02a0)
+                        on_press: root.dismiss()
+                        id: btn_so_02a0
+
+                    # btn so_0500
+                    Button:
+                        text: "0500"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0500)
+                        on_press: root.dismiss()
+                        id: btn_so_0500
+
+                    # btn so_0600
+                    Button:
+                        text: "0600"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0600)
+                        on_press: root.dismiss()
+                        id: btn_so_0600
+
+                    # btn so_0700
+                    Button:
+                        text: "0700"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0700)
+                        on_press: root.dismiss()
+                        id: btn_so_0700
+
+                    # btn so_0800
+                    Button:
+                        text: "0800"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0800)
+                        on_press: root.dismiss()
+                        id: btn_so_0800
+
+                    # btn so_0900
+                    Button:
+                        text: "0900"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_0900)
+                        on_press: root.dismiss()
+                        id: btn_so_0900
+
+
+            # scroll_1000
+            ScrollView:
+                size_hint_x: 1
+                size_hint_y: 0.15
+                do_scroll_x: True
+                do_scroll_y: False
+                GridLayout:
+                    size:(0.25, 1)
+                    size_hint_x: None
+                    size_hint_y: 1
+                    rows: 1
+                    width: self.minimum_width
+                    col_default_width: '75dp'
+                    col_force_default: True
+
+                    # btn so_1000
+                    Button:
+                        text: "1000"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha(btn_so_1000)
+                        on_press: root.dismiss()
+                        id: btn_so_1000
+
+                    # btn so_1200
+                    Button:
+                        text: "1200"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha(btn_so_1200)
+                        on_press: root.dismiss()
+                        id: btn_so_1200
+
+                    # btn so_1300
+                    Button:
+                        text: "1300"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1300)
+                        on_press: root.dismiss()
+                        id: btn_so_1300
+
+                    # btn so_1400
+                    Button:
+                        text: "1400"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1400)
+                        on_press: root.dismiss()
+                        id: btn_so_1400
+
+                    # btn so_1500
+                    Button:
+                        text: "1500"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1500)
+                        on_press: root.dismiss()
+                        id: btn_so_1500
+
+                    # btn so_1600
+                    Button:
+                        text: "1600"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1600)
+                        on_press: root.dismiss()
+                        id: btn_so_1600
+
+                    # btn so_16a0
+                    Button:
+                        text: "16A0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_16a0)
+                        on_press: root.dismiss()
+                        id: btn_so_16a0
+
+                    # btn so_1700
+                    Button:
+                        text: "1700"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1700)
+                        on_press: root.dismiss()
+                        id: btn_so_1700
+
+                    # btn so_17a0
+                    Button:
+                        text: "17A0"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_17a0)
+                        on_press: root.dismiss()
+                        id: btn_so_17a0
+
+                    # btn so_1800
+                    Button:
+                        text: "1800"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1800)
+                        on_press: root.dismiss()
+                        id: btn_so_1800
+
+                    # btn so_1900
+                    Button:
+                        text: "1900"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_1900)
+                        on_press: root.dismiss()
+                        id: btn_so_1900
+
+            # scroll_5000
+            ScrollView:
+                size_hint_x: 1
+                size_hint_y: 0.15
+                do_scroll_x: True
+                do_scroll_y: False
+                GridLayout:
+                    size:(0.25, 1)
+                    size_hint_x: None
+                    size_hint_y: 1
+                    rows: 1
+                    width: self.minimum_width
+                    col_default_width: '75dp'
+                    col_force_default: True
+
+                    # btn so_5000
+                    Button:
+                        text: "5000"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5000)
+                        on_press: root.dismiss()
+                        id: btn_so_5000
+
+                    # btn so_5100
+                    Button:
+                        text: "5100"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5100)
+                        on_press: root.dismiss()
+                        id: btn_so_5100
+
+                    # btn so_5200
+                    Button:
+                        text: "5200"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5200)
+                        on_press: root.dismiss()
+                        id: btn_so_5200
+
+                    # btn so_5300
+                    Button:
+                        text: "5300"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5300)
+                        on_press: root.dismiss()
+                        id: btn_so_5300
+
+                    # btn so_5400
+                    Button:
+                        text: "5400"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5400)
+                        on_press: root.dismiss()
+                        id: btn_so_5400
+
+                    # btn so_5500
+                    Button:
+                        text: "5500"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5500)
+                        on_press: root.dismiss()
+                        id: btn_so_5500
+
+                    # btn so_5600
+                    Button:
+                        text: "5600"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5600)
+                        on_press: root.dismiss()
+                        id: btn_so_5600
+
+                    # btn so_5700
+                    Button:
+                        text: "5700"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5700)
+                        on_press: root.dismiss()
+                        id: btn_so_5700
+
+                    # btn so_5800
+                    Button:
+                        text: "5800"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5800)
+                        on_press: root.dismiss()
+                        id: btn_so_5800
+
+                    # btn so_5900
+                    Button:
+                        text: "5900"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_5900)
+                        on_press: root.dismiss()
+                        id: btn_so_5900
+
+            # scroll_7000
+            ScrollView:
+                size_hint_x: 1
+                size_hint_y: 0.15
+                do_scroll_x: True
+                do_scroll_y: False
+                GridLayout:
+                    size:(0.25, 1)
+                    size_hint_x: None
+                    size_hint_y: 1
+                    rows: 1
+                    width: self.minimum_width
+                    col_default_width: '75dp'
+                    col_force_default: True
+
+                    # btn so_6000
+                    Button:
+                        text: "6000"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_6000)
+                        on_press: root.dismiss()
+                        id: btn_so_6000
+
+                    # btn so_7000
+                    Button:
+                        text: "7000"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_7000)
+                        on_press: root.dismiss()
+                        id: btn_so_7000
+
+                    # btn so_7100
+                    Button:
+                        text: "7100"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_7100)
+                        on_press: root.dismiss()
+                        id: btn_so_7100
+
+                    # btn so_7200
+                    Button:
+                        text: "7200"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_7200)
+                        on_press: root.dismiss()
+                        id: btn_so_7200
+
+                    # btn so_7300
+                    Button:
+                        text: "7300"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_7300)
+                        on_press: root.dismiss()
+                        id: btn_so_7300
+
+                    # btn so_7500
+                    Button:
+                        text: "7500"
+                        bold: True
+                        background_color: 0.788, 0.788, 0.788, 1
+                        background_down: "#cecece"
+                        on_release: root.escolha_solda(btn_so_7500)
+                        on_press: root.dismiss()
+                        id: btn_so_7500
+
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_solda()
+            on_press: root.dismiss()
+            id: btn_so_back
+
+
+# outros
+<SelLocalRotasOutros>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    GridLayout:
+        cols: 2
+        rows: 3
+
+        Label:
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            text: "OUT"
+            bold: True
+
+        Button:
+            text: "PINTURA"
+            bold: True
+            background_color: 0.70, 0.67, 0.76, 1
+            background_down: "#e8f186"
+            on_release: root.escolha_out(btn_out_pintura)
+            on_press: root.dismiss()
+            id: btn_out_pintura
+        Button:
+            text: "G08"
+            bold: True
+            background_color: 0.70, 0.67, 0.76, 1
+            background_down: "#e8f186"
+            on_release: root.escolha_out(btn_out_g08)
+            on_press: root.dismiss()
+            id: btn_out_g08
+
+        FloatLayout:
+            Button:
+                pos_hint: {"right": 1.45, "top": 0.5}
+                size_hint: 1, 0.5
+                background_color: 0.92, 0.48, 0.44, 1
+                background_down: "#e8f186"
+                text: 'VOLTAR'
+                bold: True
+                on_release: root.voltar_out()
+                on_press: root.dismiss()
+                id: btn_out_back
+
+# c81 r01
+<SelLocalRotasC81R01>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R01 C81"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r01pa010
+            Button:
+                text: "PA010"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_pa010)
+                on_press: root.dismiss()
+                id: btn_c81_r01_pa010
+
+            #r01pa020
+            Button:
+                text: "PA020"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_pa020)
+                on_press: root.dismiss()
+                id: btn_c81_r01_pa020
+
+            #r01pa070
+            Button:
+                text: "PA070"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_pa070)
+                on_press: root.dismiss()
+                id: btn_c81_r01_pa070
+
+            #r01pa110
+            Button:
+                text: "PA110"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_pa110)
+                on_press: root.dismiss()
+                id: btn_c81_r01_pa110
+
+            #r01pa120
+            Button:
+                text: "PA120"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_pa120)
+                on_press: root.dismiss()
+                id: btn_c81_r01_pa120
+
+            #r01ms010
+            Button:
+                text: "MS010"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms010)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms010
+
+            #r01ms020
+            Button:
+                text: "MS020"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms020)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms020
+
+            #r01ms030
+            Button:
+                text: "MS030"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms030)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms030
+
+            #r01ms040
+            Button:
+                text: "MS040"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms040)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms040
+
+            #r01ms050
+            Button:
+                text: "MS050"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms050)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms050
+
+            #r01ms060
+            Button:
+                text: "MS060"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms060)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms060
+
+            #r01ms070
+            Button:
+                text: "MS070"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms070)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms070
+
+            #r01ms090
+            Button:
+                text: "MS090"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r01(btn_c81_r01_ms090)
+                on_press: root.dismiss()
+                id: btn_c81_r01_ms090
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c81_r01()
+            on_press: root.dismiss()
+            id: btn_c81_r01_back
+
+
+# c81 r02
+<SelLocalRotasC81R02>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R02 C81"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r02fl310
+            Button:
+                text: "FL310"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r02(btn_c81_r02_fl310)
+                on_press: root.dismiss()
+                id: btn_c81_r02_fl310
+
+            #r02fl320
+            Button:
+                text: "FL320"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r02(btn_c81_r02_fl320)
+                on_press: root.dismiss()
+                id: btn_c81_r02_fl320
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c81_r02()
+            on_press: root.dismiss()
+            id: btn_c81_r02_back
+
+
+
+# c81 r03
+<SelLocalRotasC81R03>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R03 C81"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r03fl110
+            Button:
+                text: "FL110"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl110)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl110
+
+            #r03fl120
+            Button:
+                text: "FL120"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl120)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl120
+
+            #r03fl210
+            Button:
+                text: "FL210"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl210)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl210
+
+            #r03fl220
+            Button:
+                text: "FL220"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl220)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl220
+
+            #r03fl230
+            Button:
+                text: "FL230"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl230)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl230
+
+            #r03fl240
+            Button:
+                text: "FL240"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl240)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl240
+
+            #r03fl250
+            Button:
+                text: "FL250"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl250)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl250
+
+            #r03fl260
+            Button:
+                text: "FL260"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_fl260)
+                on_press: root.dismiss()
+                id: btn_c81_r03_fl260
+
+            #r03pa030
+            Button:
+                text: "PA030"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa030)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa030
+
+            #r03pa040
+            Button:
+                text: "PA040"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa040)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa040
+
+            #r03pa050
+            Button:
+                text: "PA050"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa050)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa050
+
+            #r03pa060
+            Button:
+                text: "PA060"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa060)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa060
+
+            #r03pa080
+            Button:
+                text: "PA080"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa080)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa080
+
+            #r03pa090
+            Button:
+                text: "PA090"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa090)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa090
+
+            #r03pa100
+            Button:
+                text: "PA100"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r03(btn_c81_r03_pa100)
+                on_press: root.dismiss()
+                id: btn_c81_r03_pa100
+
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c81_r03()
+            on_press: root.dismiss()
+            id: btn_c81_r03_back
+
+
+# c81 r04
+<SelLocalRotasC81R04>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R04 C81"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r04fl110
+            Button:
+                text: "FL110"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_fl110)
+                on_press: root.dismiss()
+                id: btn_c81_r04_fl110
+
+            #r04fl120
+            Button:
+                text: "FL120"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_fl120)
+                on_press: root.dismiss()
+                id: btn_c81_r04_fl120
+
+            #r04fl330
+            Button:
+                text: "FL330"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_fl330)
+                on_press: root.dismiss()
+                id: btn_c81_r04_fl330
+
+            #r04pa030
+            Button:
+                text: "PA030"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_pa030)
+                on_press: root.dismiss()
+                id: btn_c81_r04_pa030
+
+            #r04pa040
+            Button:
+                text: "PA040"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_pa040)
+                on_press: root.dismiss()
+                id: btn_c81_r04_pa040
+
+            #r04pa060
+            Button:
+                text: "PA060"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_pa060)
+                on_press: root.dismiss()
+                id: btn_c81_r04_pa060
+
+            #r04pa090
+            Button:
+                text: "PA090"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_pa090)
+                on_press: root.dismiss()
+                id: btn_c81_r04_pa090
+
+            #r04pa100
+            Button:
+                text: "PA100"
+                bold: True
+                background_color: 0.92, 0.91, 0.38, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c81_r04(btn_c81_r04_pa100)
+                on_press: root.dismiss()
+                id: btn_c81_r04_pa100
+
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c81_r04()
+            on_press: root.dismiss()
+            id: btn_c81_r04_back
+
+
+# c82 r04
+<SelLocalRotasC82R04>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R04 C82"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r04pa040
+            Button:
+                text: "PA040"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_pa040)
+                on_press: root.dismiss()
+                id: btn_c82_r04_pa040
+
+            #r04pa070
+            Button:
+                text: "PA070"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_pa070)
+                on_press: root.dismiss()
+                id: btn_c82_r04_pa070
+
+            #r04pa100
+            Button:
+                text: "PA100"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_pa100)
+                on_press: root.dismiss()
+                id: btn_c82_r04_pa100
+
+            #r04pa110
+            Button:
+                text: "PA110"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_pa110)
+                on_press: root.dismiss()
+                id: btn_c82_r04_pa110
+
+            #r04pa120
+            Button:
+                text: "PA120"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_pa120)
+                on_press: root.dismiss()
+                id: btn_c82_r04_pa120
+
+            #r04fl220
+            Button:
+                text: "FL220"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_fl220)
+                on_press: root.dismiss()
+                id: btn_c82_r04_fl220
+
+            #r04fl230
+            Button:
+                text: "FL230"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_fl230)
+                on_press: root.dismiss()
+                id: btn_c82_r04_fl230
+
+            #r04fl240
+            Button:
+                text: "FL240"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r04(btn_c82_r04_fl240)
+                on_press: root.dismiss()
+                id: btn_c82_r04_fl240
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c82_r04()
+            on_press: root.dismiss()
+            id: btn_c82_r04_back
+
+
+# c82 r05
+<SelLocalRotasC82R05>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R05 C82"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r05fl210
+            Button:
+                text: "FL210"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_fl210)
+                on_press: root.dismiss()
+                id: btn_c82_r05_fl210
+
+            #r05fl220
+            Button:
+                text: "FL220"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_fl220)
+                on_press: root.dismiss()
+                id: btn_c82_r05_fl220
+
+            #r05fl230
+            Button:
+                text: "FL230"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_fl230)
+                on_press: root.dismiss()
+                id: btn_c82_r05_fl230
+
+            #r05fl240
+            Button:
+                text: "FL240"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_fl240)
+                on_press: root.dismiss()
+                id: btn_c82_r05_fl240
+
+            #r05pa010
+            Button:
+                text: "PA010"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa010)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa010
+
+            #r05pa020
+            Button:
+                text: "PA020"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa020)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa020
+
+            #r05pa050
+            Button:
+                text: "PA050"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa050)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa050
+
+            #r05pa060
+            Button:
+                text: "PA060"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa060)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa060
+
+            #r05pa080
+            Button:
+                text: "PA080"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa080)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa080
+
+            #r05pa100
+            Button:
+                text: "PA100"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa100)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa100
+
+            #r05pa130
+            Button:
+                text: "PA130"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa130)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa130
+
+            #r05pa120
+            Button:
+                text: "PA120"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_pa120)
+                on_press: root.dismiss()
+                id: btn_c82_r05_pa120
+
+            #r05ms005
+            Button:
+                text: "MS005"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms005)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms005
+
+            #r05ms010
+            Button:
+                text: "MS010"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms010)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms010
+
+            #r05ms020
+            Button:
+                text: "MS020"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms020)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms020
+
+            #r05ms030
+            Button:
+                text: "MS030"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms030)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms030
+
+            #r05ms040
+            Button:
+                text: "MS040"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms040)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms040
+
+            #r05ms050
+            Button:
+                text: "MS050"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms050)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms050
+
+            #r05ms080
+            Button:
+                text: "MS080"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r05(btn_c82_r05_ms080)
+                on_press: root.dismiss()
+                id: btn_c82_r05_ms080
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c82_r05()
+            on_press: root.dismiss()
+            id: btn_c82_r05_back
+
+
+# c82 r06
+<SelLocalRotasC82R06>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R06 C82"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r06pa010
+            Button:
+                text: "PA010"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_pa010)
+                on_press: root.dismiss()
+                id: btn_c82_r06_pa010
+
+            #r06pa030
+            Button:
+                text: "PA030"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_pa030)
+                on_press: root.dismiss()
+                id: btn_c82_r06_pa030
+
+            #r06pa090
+            Button:
+                text: "PA090"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_pa090)
+                on_press: root.dismiss()
+                id: btn_c82_r06_pa090
+
+            #r06fl110
+            Button:
+                text: "FL110"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_fl110)
+                on_press: root.dismiss()
+                id: btn_c82_r06_fl110
+
+            #r06fl120
+            Button:
+                text: "FL120"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_fl120)
+                on_press: root.dismiss()
+                id: btn_c82_r06_fl120
+
+            #r06fl130
+            Button:
+                text: "FL130"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_fl130)
+                on_press: root.dismiss()
+                id: btn_c82_r06_fl130
+
+            #r06ms005
+            Button:
+                text: "MS005"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms005)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms005
+
+            #r06ms010
+            Button:
+                text: "MS010"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms010)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms010
+
+            #r05ms030
+            Button:
+                text: "MS030"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms030)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms030
+
+            #r06ms040
+            Button:
+                text: "MS040"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms040)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms040
+
+            #r06ms050
+            Button:
+                text: "MS050"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms050)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms050
+
+            #r06ms080
+            Button:
+                text: "MS080"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms080)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms080
+
+            #r06ms090
+            Button:
+                text: "MS090"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r06(btn_c82_r06_ms090)
+                on_press: root.dismiss()
+                id: btn_c82_r06_ms090
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c82_r06()
+            on_press: root.dismiss()
+            id: btn_c82_r06_back
+
+
+# c82 r07
+<SelLocalRotasC82R07>
+    title: "SELECIONE"
+    title_align: "center"
+    size: (500, 400)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.5, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 1, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "R07 C82"
+            bold: True
+        GridLayout:
+            pos_hint: {"right": 1, "top": 0.75}
+            size_hint: 1, 0.5
+            cols: 5
+            rows: 4
+
+            #r07fl110
+            Button:
+                text: "FL110"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r07(btn_c82_r07_fl110)
+                on_press: root.dismiss()
+                id: btn_c82_r07_fl110
+
+            #r07fl130
+            Button:
+                text: "FL130"
+                bold: True
+                background_color: 0.52, 0.93, 0.44, 1
+                background_down: "#e8f186"
+                on_release: root.escolha_c82_r07(btn_c82_r07_fl130)
+                on_press: root.dismiss()
+                id: btn_c82_r07_fl130
+
+        Button:
+            pos_hint: {"right": 0.75, "top": 0.15}
+            size_hint: 0.5, 0.1
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local_c82_r07()
+            on_press: root.dismiss()
+            id: btn_c82_r07_back
+
+# sel local
+<SelLocal>
+    title: "CONFIRMAR"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.75, "top": 1.1}
+            size_hint: 0.5, 0.5
+            text: "ENDEREÇO:"
+            bold: True
+        Label:
+            pos_hint: {"right": 0.75, "top": 0.85}
+            size_hint: 0.5, 0.5
+            font_size: 40
+            valign: 'middle'
+            bold: True
+            id: end_selec
+
+        Button:
+            pos_hint: {"right": 0.5, "top": 0.25}
+            size_hint: 0.5, 0.2
+            background_color: 0.92, 0.48, 0.44, 1
+            background_down: "#e8f186"
+            text: 'VOLTAR'
+            bold: True
+            on_release: root.voltar_local()
+            on_press: root.dismiss()
+            id: btn_sel_local_voltar
+
+        Button:
+            pos_hint: {"right": 1, "top": 0.25}
+            size_hint: 0.5, 0.2
+            background_color: 0.74, 0.93, 0.40, 1
+            background_down: "#e8f186"
+            text: 'OK'
+            bold: True
+            on_release: root.sel_ok()
+            on_press: root.dismiss()
+            id: btn_sel_local_ok
+
+
+# res check
+<ResCheck>
+    title: "ENDEREÇO"
+    title_align: "center"
+    size: (400, 300)
+    size_hint: (None, None)
+    auto_dismiss: True
+    separator_color: 0.91, 0.94, 0.56, 1
+    FloatLayout:
+        Label:
+            pos_hint: {"right": 0.75, "top": 0.85}
+            size_hint: 0.5, 0.5
+            font_size: 40
+            valign: 'middle'
+            bold: True
+            text: root.texto
+
+        Button:
+            pos_hint: {"right": 1, "top": 0.25}
+            size_hint: 1, 0.2
+            background_color: 0.74, 0.93, 0.40, 1
+            background_down: "#e8f186"
+            text: 'OK'
+            bold: True
+            on_release: root.dismiss()
+            id: btn_sel_local_ok
