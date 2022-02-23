@@ -3,16 +3,17 @@
         Label:
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.1
-            font_size: 32
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             font_name: "righteous"
             valign: 'middle'
             text: "SELECIONE A POSIÇÃO"
         Image:
-            pos_hint: {"right": 1, "top": 0.9}
+            pos_hint: {"right": 1.25, "top": 0.9}
             size_hint: 0.45, 0.65
             source: "icones/klt_car_pos_right.png"
+            allow_stretch: True
 
         # Positions
 
@@ -20,14 +21,14 @@
         # Input A
         TextInput:
             id: pos_a_text_dir
-            pos_hint: {"right": 0.575, "top": 0.795}
-            size_hint: 0.40, 0.05
+            pos_hint: {"right": 0.8, "top": 0.815}
+            size_hint: 0.65, 0.075
             multiline: False
-            background_color: 0.682, 0.671, 0.514, 1
-            font_size: 18
-            color: 0, 0, 0, 1
-            hint_text: "..."
-            hint_text_color: 0, 0, 0, 1
+            font_size: dp(32)
+            background_disabled_normal: ''
+            background_normal: ''
+            background_color:(0.91, 0.94, 0.56, 0.35)
+            disabled_color: 0.91, 0.94, 0.56, 1
             halign: 'center'
             disabled: True
             bold: True
@@ -46,9 +47,9 @@
             font_name: "righteous"
             bold: True
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.15, "top": 0.815}
-            size_hint: 0.125, 0.1
-            font_size: 24
+            pos_hint: {"right": 0.14, "top": 0.815}
+            size_hint: 0.125, 0.075
+            font_size: dp(30)
             bold: True
             id: pos_a_botao_dir
             on_release: root.btn_a()
@@ -58,16 +59,17 @@
         # Input B
         TextInput:
             id: pos_b_text_dir
-            pos_hint: {"right": 0.575, "top": 0.645}
-            size_hint: 0.40, 0.05
+            pos_hint: {"right": 0.8, "top": 0.685}
+            size_hint: 0.65, 0.075
             multiline: False
-            background_color: 0.682, 0.671, 0.514, 1
-            font_size: 18
+            font_size: dp(32)
+            background_disabled_normal: ''
+            background_normal: ''
+            background_color:(0.91, 0.94, 0.56, 0.35)
+            disabled_color: 0.91, 0.94, 0.56, 1
             halign: 'center'
             disabled: True
             bold: True
-            hint_text: "..."
-            hint_text_color: 0, 0, 0, 1
             text: root.texto_b
 
         # btn B
@@ -83,9 +85,9 @@
             font_name: "righteous"
             bold: True
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.15, "top": 0.665}
-            size_hint: 0.125, 0.1
-            font_size: 24
+            pos_hint: {"right": 0.14, "top": 0.685}
+            size_hint: 0.125, 0.075
+            font_size: dp(30)
             bold: True
             id: pos_b_botao_dir
             text: "B"
@@ -96,16 +98,17 @@
         # Input C
         TextInput:
             id: pos_c_text_dir
-            pos_hint: {"right": 0.575, "top": 0.495}
-            size_hint: 0.40, 0.05
+            pos_hint: {"right": 0.8, "top": 0.545}
+            size_hint: 0.65, 0.075
             multiline: False
-            background_color: 0.682, 0.671, 0.514, 1
-            font_size: 18
+            font_size: dp(32)
+            background_disabled_normal: ''
+            background_normal: ''
+            background_color:(0.91, 0.94, 0.56, 0.35)
+            disabled_color: 0.91, 0.94, 0.56, 1
             halign: 'center'
             disabled: True
             bold: True
-            hint_text: "..."
-            hint_text_color: 0, 0, 0, 1
             text: root.texto_c
 
         # btn C
@@ -121,9 +124,9 @@
             font_name: "righteous"
             bold: True
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.15, "top": 0.515}
-            size_hint: 0.125, 0.1
-            font_size: 24
+            pos_hint: {"right": 0.14, "top": 0.545}
+            size_hint: 0.125, 0.075
+            font_size: dp(30)
             bold: True
             id: pos_c_botao_dir
             text: "C"
@@ -134,16 +137,17 @@
         # Input D
         TextInput:
             id: pos_d_text_dir
-            pos_hint: {"right": 0.575, "top": 0.355}
-            size_hint: 0.40, 0.05
+            pos_hint: {"right": 0.8, "top": 0.405}
+            size_hint: 0.65, 0.075
             multiline: False
-            background_color: 0.682, 0.671, 0.514, 1
-            font_size: 18
+            font_size: dp(32)
+            background_disabled_normal: ''
+            background_normal: ''
+            background_color:(0.91, 0.94, 0.56, 0.35)
+            disabled_color: 0.91, 0.94, 0.56, 1
             halign: 'center'
             disabled: True
             bold: True
-            hint_text: "..."
-            hint_text_color: 0, 0, 0, 1
             text: root.texto_d
         # btn D
         Button:
@@ -158,9 +162,9 @@
             font_name: "righteous"
             bold: True
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.15, "top": 0.375}
-            size_hint: 0.125, 0.1
-            font_size: 24
+            pos_hint: {"right": 0.14, "top": 0.405}
+            size_hint: 0.125, 0.075
+            font_size: dp(30)
             bold: True
             id: pos_d_botao_dir
             text: "D"
@@ -177,21 +181,28 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.2075}
-            size_hint:  0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.25}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela("principalpage")
         Label:
-            pos_hint: {"right": 1, "top": 0.285}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.235}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: "CARRINHO SELECIONADO: 5º"
 
         # lado sel
@@ -204,21 +215,28 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.1475}
-            size_hint: 0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.1655}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela("seleclado5page")
         Label:
-            pos_hint: {"right": 1, "top": 0.225}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.15}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: "LADO SELECIONADO: DIREITO"
 
         # andar sel
@@ -231,39 +249,46 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.0875}
-            size_hint: 0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.076}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela("selecandar5dirpage")
         Label:
-            pos_hint: {"right": 1, "top": 0.165}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.065}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: "ANDAR SELECIONADO: 1º"
 
         # botao_ir
         Button:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.75)
+                    rgba: (0, 0, 0, 0.55)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
-                    radius: [90]
+                    radius: [10]
             background_color: (0, 0, 0, 0)
-            text: 'IR'
+            text: 'PRONTO'
             font_name: "righteous"
             bold: True
-            font_size: 32
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             id: botao_ir
-            pos_hint: {"right": 0.95, "top": 0.2225}
-            size_hint: 0.175, 0.175
+            pos_hint: {"right": 0.865, "top": 0.91}
+            size_hint: 0.75, 0.075
             on_release: root.botao_ir()

@@ -3,15 +3,23 @@
         Label:
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.2
-            font_size: 32
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             valign: 'middle'
             font_name: "righteous"
             text: "SELECIONE O ANDAR"
         Image:
-            pos_hint: {"right": 1, "top": 0.875}
-            size_hint: 1, 0.75
+            canvas:
+                Color:
+                    rgb: (1, 1, 1)
+                Rectangle:
+                    texture: self.texture
+                    size: self.width , self.height + 2
+                    pos: self.x, self.y
+            allow_stretch: True
+            pos_hint: {"right": 1.025, "top": 0.775}
+            size_hint: 1, 0.65
             source: "icones/klt_car_level.png"
         Button:
             canvas.before:
@@ -24,8 +32,8 @@
             background_color: (0, 0, 0, 0)
             font_name: "righteous"
             pos_hint: {"right": 0.9, "top": 0.75}
-            size_hint: 0.35, 0.075
-            font_size: 24
+            size_hint: 0.45, 0.075
+            font_size: dp(40)
             color: 0, 0, 0, 1
             bold: True
             text: "5º"
@@ -42,8 +50,8 @@
             background_color: (0, 0, 0, 0)
             font_name: "righteous"
             pos_hint: {"right": 0.9, "top": 0.65}
-            size_hint: 0.35, 0.075
-            font_size: 24
+            size_hint: 0.45, 0.075
+            font_size: dp(40)
             color: 0, 0, 0, 1
             bold: True
             text: "4º"
@@ -60,8 +68,8 @@
             background_color: (0, 0, 0, 0)
             font_name: "righteous"
             pos_hint: {"right": 0.9, "top": 0.55}
-            size_hint: 0.35, 0.075
-            font_size: 24
+            size_hint: 0.45, 0.075
+            font_size: dp(40)
             color: 0, 0, 0, 1
             bold: True
             text: "3º"
@@ -78,8 +86,8 @@
             background_color: (0, 0, 0, 0)
             font_name: "righteous"
             pos_hint: {"right": 0.9, "top": 0.45}
-            size_hint: 0.35, 0.075
-            font_size: 24
+            size_hint: 0.45, 0.075
+            font_size: dp(40)
             color: 0, 0, 0, 1
             bold: True
             text: "2º"
@@ -96,8 +104,8 @@
             background_color: (0, 0, 0, 0)
             font_name: "righteous"
             pos_hint: {"right": 0.9, "top": 0.35}
-            size_hint: 0.35, 0.075
-            font_size: 24
+            size_hint: 0.45, 0.075
+            font_size: dp(40)
             color: 0, 0, 0, 1
             bold: True
             text: "1º"
@@ -113,21 +121,28 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.2075}
-            size_hint:  0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.25}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela("principalpage")
         Label:
-            pos_hint: {"right": 1, "top": 0.285}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.235}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: "CARRINHO SELECIONADO: 4º"
             id: label_carro_sel
 
@@ -140,20 +155,27 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.1475}
-            size_hint: 0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.1655}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela('seleclado4page')
         Label:
-            pos_hint: {"right": 1, "top": 0.225}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.15}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: "LADO SELECIONADO: DIREITO"
             id: label_lado_sel

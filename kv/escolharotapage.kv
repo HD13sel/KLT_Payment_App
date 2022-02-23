@@ -14,86 +14,156 @@
                 allow_stretch: True
                 source: "icones/rotas/site_jd.png"
             Button:
+                canvas.before:
+                    Color:
+                        rgba: (0.98, 0.89, 0, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
                 pos_hint: {"right": 1, "top": 0.58}
                 size_hint: 0.175, 0.58
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
-                bold: True
                 id: rota_01_botao
-                text: "ROTA 01"
                 on_release: app.mudar_tela("rota01page")
-            Button:
-                pos_hint: {"right": 0.75, "top": 0.58}
-                size_hint: 0.15, 0.58
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 01"
                 bold: True
-                id: rota_03_02_botao
-                text: "ROTA 03-02"
-                on_release: app.mudar_tela("rota0302page")
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
             Button:
+                canvas.before:
+                    Color:
+                        rgba: (0.90, 0.87, 0, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
+                pos_hint: {"right": 0.775, "top": 0.58}
+                size_hint: 0.15, 0.58
+                id: rota_03_02_botao
+                on_release: app.mudar_tela("rota0302page")
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 03-02"
+                bold: True
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
+            Button:
+                canvas.before:
+                    Color:
+                        rgba: (0.85, 98, 0, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
                 pos_hint: {"right": 0.60, "top": 0.58}
                 size_hint: 0.15, 0.58
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
-                bold: True
                 id: rota_04_botao
-                text: "ROTA 04"
                 on_release: app.mudar_tela("rota04page")
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 04"
+                bold: True
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
             Button:
-                pos_hint: {"right": 0.45, "top": 0.58}
+                canvas.before:
+                    Color:
+                        rgba: (0.59, 0.90, 0.08, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
+                pos_hint: {"right": 0.425, "top": 0.58}
                 size_hint: 0.175, 0.58
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
-                bold: True
                 id: rota_05_botao
-                text: "ROTA 05"
                 on_release: app.mudar_tela("rota05page")
-            Button:
-                pos_hint: {"right": 0.245, "top": 0.58}
-                size_hint: 0.225, 0.58
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 05"
                 bold: True
-                id: rota_06_07_botao
-                text: "ROTA 06-07"
-                on_release: app.mudar_tela("rota0607page")
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
             Button:
+                canvas.before:
+                    Color:
+                        rgba: (0.42, 1, 0.23, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
+                pos_hint: {"right": 0.225, "top": 0.58}
+                size_hint: 0.2, 0.58
+                id: rota_06_07_botao
+                on_release: app.mudar_tela("rota0607page")
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 06-07"
+                bold: True
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
+            Button:
+                canvas.before:
+                    Color:
+                        rgba: (0.86, 0.58, 0.15, 0.55)
+                    RoundedRectangle:
+                        size: self.width , self.height
+                        pos: self.x, self.y
+                        radius: [15]
+                background_color: (0, 0, 0, 0)
                 pos_hint: {"right": 1, "top": 0.9}
                 size_hint: 1, 0.275
-                color: 0.91, 0.94, 0.56, 1
-                background_color: 0, 0, 0, 0.5
-                background_down: "#cecece"
-                bold: True
                 id: rota_08_botao
-                text: "ROTA 08"
                 on_release: app.mudar_tela("rota08page")
+                font_name: "righteous"
+                color: 0, 0, 0, 1
+                text: "ROTA\n 08"
+                bold: True
+                font_size: dp(16)
+                halign: 'center'
+                valign: 'middle'
         Label:
             canvas.before:
                 Color:
-                    rgba: 0, 0, 0, 0.5
-                Rectangle:
-                    size: self.size
-                    pos: self.pos
+                    rgba: 0, 0, 0, 0.55
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 1, "top": 1}
-            size_hint: 0.9, 0.1
-            font_size: 24
+            size_hint: 0.8, 0.1
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             valign: 'middle'
             text: "ESCOLHA A ROTA"
         Button:
-            pos_hint: {"right": 0.1, "top": 1}
-            size_hint: 0.1, 0.1
-            color: 0.91, 0.94, 0.56, 1
-            background_color: 1, 0, 0, 0.5
-            background_down: "#cecece"
+            canvas.before:
+                Color:
+                    rgba: 0.86, 0.23, 0.15, 0.975
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            background_color: (0, 0, 0, 0)
+            pos_hint: {"right": 0.2, "top": 1}
+            size_hint: 0.2, 0.1
+            color: 0.86, 0.94, 0.56, 1
             bold: True
+            font_size: dp(32)
+            font_name: "righteous"
+            text: "X"
             id: voltar_botao_escolha_rota
-            text: "VOLTAR"
-            on_press: Factory.Voltar().open()
+            on_release: Factory.Voltar().open()

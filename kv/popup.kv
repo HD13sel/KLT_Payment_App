@@ -1,8 +1,9 @@
 # confirmar
 <Confirmar>
     title: 'CONFIRMAÇÃO'
+    bold: True
     title_align: 'center'
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -11,30 +12,49 @@
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.85
             valign: 'middle'
-            text: "DESEJA CONFIRMAR TODOS OS DADOS REGISTRADOS?"
-            font_size: 14
+            bold: True
+            text: "     DESEJA CONFIRMAR\n       TODOS OS DADOS\n         REGISTRADOS?"
+            font_size: dp(24)
         Button:
+            canvas.before:
+                Color:
+                    rgba: (0.44, 0.93, 0.48, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 0.5, "top": 0.2}
             size_hint: 0.5, 0.15
+            font_name: "righteous"
             text: "SIM"
             bold: True
-            background_color: 0.44, 0.93, 0.48, 1
-            background_down: "#e8f186"
+            font_size: dp(20)
+            color: 0, 0, 0, 1
             on_release: app.mudar_tela('escolharotapage')
             on_press: root.dismiss()
         Button:
+            canvas.before:
+                Color:
+                    rgba: (0.92, 0.48, 0.44, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 1, "top": 0.2}
             size_hint: 0.5, 0.15
-            background_color: 0.92, 0.48, 0.44, 1
-            background_down: "#e8f186"
+            font_name: "righteous"
             text: 'NÃO'
+            font_size: dp(20)
+            color: 0, 0, 0, 1
             bold: True
             on_press: root.dismiss()
 # voltar
 <Voltar>
     title: "DESEJA VOLTAR?"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -43,23 +63,42 @@
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.85
             valign: 'middle'
-            text: "TODOS SEUS DADOS REGISTRADOS SERÃO RESETADOS!"
-            font_size: 14
+            bold: True
+            text: "  TODOS SEUS DADOS\nREGISTRADOS SERÃO\n        RESETADOS!"
+            font_size: dp(24)
         Button:
+            canvas.before:
+                Color:
+                    rgba: (0.44, 0.93, 0.48, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 0.5, "top": 0.2}
             size_hint: 0.5, 0.15
+            font_name: "righteous"
             text: "SIM"
             bold: True
-            background_color: 0.44, 0.93, 0.48, 1
-            background_down: "#e8f186"
+            font_size: dp(20)
+            color: 0, 0, 0, 1
             on_release: root.voltar_botao()
             on_press: root.dismiss()
         Button:
+            canvas.before:
+                Color:
+                    rgba: (0.92, 0.48, 0.44, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 1, "top": 0.2}
             size_hint: 0.5, 0.15
-            background_color: 0.92, 0.48, 0.44, 1
-            background_down: "#e8f186"
+            font_name: "righteous"
             text: 'NÃO'
+            font_size: dp(20)
+            color: 0, 0, 0, 1
             bold: True
             on_press: root.dismiss()
 
@@ -67,7 +106,7 @@
 <SelLocalRegiao>
     title: "SELECIONE"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -130,7 +169,7 @@
 <SelLocalRotasC81>
     title: "SELECIONE"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -193,7 +232,7 @@
 <SelLocalRotasC82>
     title: "SELECIONE"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -256,7 +295,7 @@
 <SelLocalRotasSolda>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -735,7 +774,7 @@
 <SelLocalRotasOutros>
     title: "SELECIONE"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -783,7 +822,7 @@
 <SelLocalRotasC81R01>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -950,7 +989,7 @@
 <SelLocalRotasC81R02>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1008,7 +1047,7 @@
 <SelLocalRotasC81R03>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1196,7 +1235,7 @@
 <SelLocalRotasC81R04>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1314,7 +1353,7 @@
 <SelLocalRotasC82R04>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1431,7 +1470,7 @@
 <SelLocalRotasC82R05>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1658,7 +1697,7 @@
 <SelLocalRotasC82R06>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1825,7 +1864,7 @@
 <SelLocalRotasC82R07>
     title: "SELECIONE"
     title_align: "center"
-    size: (500, 400)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1881,7 +1920,7 @@
 <SelLocal>
     title: "CONFIRMAR"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -1894,7 +1933,7 @@
         Label:
             pos_hint: {"right": 0.75, "top": 0.85}
             size_hint: 0.5, 0.5
-            font_size: 40
+            font_size: dp(32)
             valign: 'middle'
             bold: True
             id: end_selec
@@ -1926,7 +1965,7 @@
 <ResCheck>
     title: "ENDEREÇO"
     title_align: "center"
-    size: (400, 300)
+    size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1

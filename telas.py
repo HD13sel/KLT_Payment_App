@@ -2195,13 +2195,13 @@ class Rota0607Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
         if parada.split(' ')[1] == 'P01':
-            setores = ['R06 C82MS005', 'R06 C82PA010', 'R06 C82MS010',
-                       'R06 C82PA030', 'R06 C82PA090', 'OUT G08', 'OUT PINTURA']
+            setores = ['R06 C82MS005', 'R06 C82PA010', 'R06 C82PA030',
+                       'R06 C82PA090', 'OUT G08', 'OUT PINTURA']
             for c in range(1, 6):
                 app.root.ids[f'resladodir{c}page'].mudar_cor(setores)
                 app.root.ids[f'resladoesq{c}page'].mudar_cor(setores)
         elif parada.split(' ')[1] == 'P02':
-            setores = ['R06 C82MS020', 'R06 C82FL110']
+            setores = ['R06 C82MS010', 'R06 C82FL110']
             for c in range(1, 6):
                 app.root.ids[f'resladodir{c}page'].mudar_cor(setores)
                 app.root.ids[f'resladoesq{c}page'].mudar_cor(setores)

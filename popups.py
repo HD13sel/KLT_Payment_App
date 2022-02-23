@@ -221,30 +221,33 @@ class SelLocalRotasC82R07(Popup):
 class SelLocal(Popup):
     def voltar_local(self):
         text = self.ids['end_selec'].text
-        textconv = text.split()
-        linha = textconv[1][0:3]
-        rota = textconv[0]
-        local = textconv[1][3:]
-        if rota == 'OUT':
-            SelLocalRotasOutros().open()
-        if rota == 'R01' and linha == 'C81':
-            SelLocalRotasC81R01().open()
-        if rota == 'R02' and linha == 'C81':
-            SelLocalRotasC81R02().open()
-        if rota == 'R03' and linha == 'C81':
-            SelLocalRotasC81R03().open()
-        if rota == 'R04' and linha == 'C81':
-            SelLocalRotasC81R04().open()
-        if rota == 'R04' and linha == 'C82':
-            SelLocalRotasC82R04().open()
-        if rota == 'R05' and linha == 'C82':
-            SelLocalRotasC82R05().open()
-        if rota == 'R06' and linha == 'C82':
-            SelLocalRotasC82R06().open()
-        if rota == 'R07' and linha == 'C82':
-            SelLocalRotasC82R07().open()
-        if rota == 'R08':
-            SelLocalRotasSolda().open()
+        if len(text.split()) > 1:
+            textconv = text.split()
+            linha = textconv[1][0:3]
+            rota = textconv[0]
+            local = textconv[1][3:]
+            if rota == 'OUT':
+                SelLocalRotasOutros().open()
+            if rota == 'R01' and linha == 'C81':
+                SelLocalRotasC81R01().open()
+            if rota == 'R02' and linha == 'C81':
+                SelLocalRotasC81R02().open()
+            if rota == 'R03' and linha == 'C81':
+                SelLocalRotasC81R03().open()
+            if rota == 'R04' and linha == 'C81':
+                SelLocalRotasC81R04().open()
+            if rota == 'R04' and linha == 'C82':
+                SelLocalRotasC82R04().open()
+            if rota == 'R05' and linha == 'C82':
+                SelLocalRotasC82R05().open()
+            if rota == 'R06' and linha == 'C82':
+                SelLocalRotasC82R06().open()
+            if rota == 'R07' and linha == 'C82':
+                SelLocalRotasC82R07().open()
+            if rota == 'R08':
+                SelLocalRotasSolda().open()
+        else:
+            SelLocalRegiao().open()
 
     def sel_ok(self):
         app = App.get_running_app()

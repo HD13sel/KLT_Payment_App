@@ -8,7 +8,7 @@
                     Rectangle:
                         texture: self.texture
                         size: self.width + 20, self.height
-                        pos: self.x - 10, self.y - 10
+                        pos: self.x - 10, self.y
                 pos_hint: {"right": 1, "top": 1}
                 size_hint: 1, 1
                 allow_stretch: True
@@ -16,13 +16,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: 0, 0, 0, 0.5
-                Rectangle:
-                    size: self.size
-                    pos: self.pos
+                    rgba: 0, 0, 0, 0.55
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            background_color: (0, 0, 0, 0)
             pos_hint: {"right": 1, "top": 1}
-            size_hint: 0.9, 0.1
-            font_size: 24
+            size_hint: 0.8, 0.1
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             valign: 'middle'
@@ -33,14 +35,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 1, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.375, "top": 0.1}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS090"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -49,14 +52,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.8, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.35}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS070"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -65,14 +69,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.665, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.45}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS060"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -81,14 +86,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.575, "top": 0.30}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.525}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS050"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -97,14 +103,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.505, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.6}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS040"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -113,14 +120,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.25)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.425, "top": 0.30}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.665}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS030"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -129,14 +137,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.355, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.75}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS020"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -145,14 +154,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.275, "top": 0.30}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.825}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "MS010"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -161,14 +171,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.175, "top": 0.40}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.4, "top": 0.925}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA010"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -178,14 +189,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.175, "top": 0.20}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.205, "top": 0.90}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA130"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -195,14 +207,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 1, "top": 0.80}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.125}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA070"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -211,14 +224,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.75, "top": 0.80}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.375}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA110"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -227,14 +241,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.60, "top": 0.80}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.5}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA020"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -242,14 +257,15 @@
         Label:
             canvas.before:
                 Color:
-                    rgba: (0, 0, 0, 0.45)
-                Rectangle:
-                    size: 100, 45
+                    rgba: (0, 0, 0, 0.3)
+                RoundedRectangle:
+                    size: self.width , self.height
                     pos: self.x, self.y
-            pos_hint: {"right": 0.35, "top": 0.80}
-            size_hint: 0.135, 0.1
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.775}
+            size_hint: 0.15, 0.05
+            font_size: dp(16)
             text: "PA120"
-            font_size: 16
             color: 1, 1, 1, 1
             bold: True
 
@@ -257,7 +273,7 @@
         Button:
             canvas.before:
                 Color:
-                    rgba: (0.91, 0.94, 0.56, 0.8)
+                    rgba: (0.98, 0.89, 0, 0.55)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
@@ -266,8 +282,8 @@
             font_name: "righteous"
             text: 'P-01'
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.95, "top": 0.6}
-            size_hint: 0.15, 0.175
+            pos_hint: {"right": 0.6, "top": 0.275}
+            size_hint: 0.15, 0.125
             bold: True
             id: r01_parada_01_botao
             on_press: root.parada_sel('R01 P01')
@@ -276,7 +292,7 @@
         Button:
             canvas.before:
                 Color:
-                    rgba: (0.91, 0.94, 0.56, 0.8)
+                    rgba: (0.98, 0.89, 0, 0.6)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
@@ -285,8 +301,8 @@
             font_name: "righteous"
             text: 'P-02'
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.70, "top": 0.6}
-            size_hint: 0.15, 0.175
+            pos_hint: {"right": 0.6, "top": 0.495}
+            size_hint: 0.15, 0.125
             bold: True
             id: r01_parada_02_botao
             on_press: root.parada_sel('R01 P02')
@@ -295,7 +311,7 @@
         Button:
             canvas.before:
                 Color:
-                    rgba: (0.91, 0.94, 0.56, 0.8)
+                    rgba: (0.98, 0.89, 0, 0.65)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
@@ -304,8 +320,8 @@
             font_name: "righteous"
             text: 'P-03'
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.520, "top": 0.6}
-            size_hint: 0.15, 0.175
+            pos_hint: {"right": 0.6, "top": 0.63}
+            size_hint: 0.15, 0.125
             bold: True
             id: r01_parada_03_botao
             on_press: root.parada_sel('R01 P03')
@@ -314,7 +330,7 @@
         Button:
             canvas.before:
                 Color:
-                    rgba: (0.91, 0.94, 0.56, 0.8)
+                    rgba: (0.98, 0.89, 0, 0.7)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
@@ -323,8 +339,8 @@
             font_name: "righteous"
             text: 'P-04'
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.35, "top": 0.6}
-            size_hint: 0.15, 0.175
+            pos_hint: {"right": 0.6, "top": 0.765}
+            size_hint: 0.15, 0.125
             bold: True
             id: r01_parada_04_botao
             on_press: root.parada_sel('R01 P04')
@@ -333,7 +349,7 @@
         Button:
             canvas.before:
                 Color:
-                    rgba: (0.91, 0.94, 0.56, 0.8)
+                    rgba: (0.98, 0.89, 0, 0.75)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
@@ -342,19 +358,27 @@
             font_name: "righteous"
             text: 'P-05'
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.18, "top": 0.6}
-            size_hint: 0.15, 0.175
+            pos_hint: {"right": 0.6, "top": 0.9}
+            size_hint: 0.15, 0.125
             bold: True
             id: r01_parada_05_botao
             on_press: root.parada_sel('R01 P05')
 
         Button:
-            pos_hint: {"right": 0.1, "top": 1}
-            size_hint: 0.1, 0.1
-            color: 0.91, 0.94, 0.56, 1
-            background_color: 1, 0, 0, 0.5
-            background_down: "#cecece"
+            canvas.before:
+                Color:
+                    rgba: 0.86, 0.23, 0.15, 0.975
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            background_color: (0, 0, 0, 0)
+            pos_hint: {"right": 0.2, "top": 1}
+            size_hint: 0.2, 0.1
+            color: 0.86, 0.94, 0.56, 1
             bold: True
+            font_size: dp(32)
+            font_name: "righteous"
+            text: "<"
             id: voltar_botao_rota01
-            text: "ROTAS"
             on_press: app.mudar_tela('escolharotapage')

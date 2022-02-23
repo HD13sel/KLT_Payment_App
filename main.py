@@ -6,6 +6,7 @@ import telas
 from telas import *
 from botoes import *
 from popups import *
+from kivy.metrics import dp, sp
 import os
 import certifi
 
@@ -13,7 +14,6 @@ os.environ["SSL_CERT_FILE"] = certifi.where()
 
 
 GUI = Builder.load_file("main.kv")
-
 
 class MainApp(App):
     def __init__(self, **kwargs):

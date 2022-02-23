@@ -3,7 +3,7 @@
         Label:
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.2
-            font_size: 32
+            font_size: dp(38)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             valign: 'middle'
@@ -17,7 +17,7 @@
             pos_hint: {"right": 0.5, "top": 0.75}
             size_hint: 0.5, 0.5
             bold: True
-            font_size: 16
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             background_color: 0.19, 0.42, 0.19, 0.25
             background_down: "#e8f186"
@@ -29,7 +29,7 @@
             pos_hint: {"right": 1, "top": 0.75}
             size_hint: 0.5, 0.5
             bold: True
-            font_size: 16
+            font_size: dp(32)
             color: 0.91, 0.94, 0.56, 1
             background_color: 0.19, 0.42, 0.19, 0.25
             background_down: "#e8f186"
@@ -46,19 +46,26 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.2075}
-            size_hint: 0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.25}
+            size_hint: 0.175, 0.075
             on_release: app.mudar_tela('principalpage')
 
         Label:
-            pos_hint: {"right": 1, "top": 0.285}
-            size_hint: 1, 0.2
-            font_size: 16
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width, self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.235}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             valign: "middle"

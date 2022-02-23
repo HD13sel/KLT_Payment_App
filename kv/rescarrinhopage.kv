@@ -3,12 +3,12 @@
         Label:
             pos_hint: {"right": 1, "top": 1}
             size_hint: 1, 0.2
-            font_size: 32
+            font_size: dp(40)
             color: 0.91, 0.94, 0.56, 1
             bold: True
             font_name: "righteous"
             valign: 'middle'
-            text: "CARRINHOS DISPONÍVEIS"
+            text: "CARRINHOS\nDISPONÍVEIS"
 
         # btn car_01 resultado
         Button:
@@ -25,7 +25,7 @@
             color: 0.91, 0.94, 0.56, 1
             pos_hint: {"right": 0.6, "top": 0.75}
             size_hint: 0.5, 0.075
-            font_size: 24
+            font_size: dp(24)
             text: "CARRINHO 01"
             id: res_carrinho_01_btn
             on_release: root.sel_carrinho('1')
@@ -45,7 +45,7 @@
             color: 0.91, 0.94, 0.56, 1
             pos_hint: {"right": 0.6, "top": 0.65}
             size_hint: 0.5, 0.075
-            font_size: 24
+            font_size: dp(24)
             text: "CARRINHO 02"
             id: res_carrinho_02_btn
             on_release: root.sel_carrinho('2')
@@ -65,7 +65,7 @@
             color: 0.91, 0.94, 0.56, 1
             pos_hint: {"right": 0.6, "top": 0.55}
             size_hint: 0.5, 0.075
-            font_size: 24
+            font_size: dp(24)
             text: "CARRINHO 03"
             id: res_carrinho_03_btn
             on_release: root.sel_carrinho('3')
@@ -85,7 +85,7 @@
             color: 0.91, 0.94, 0.56, 1
             pos_hint: {"right": 0.6, "top": 0.45}
             size_hint: 0.5, 0.075
-            font_size: 24
+            font_size: dp(24)
             text: "CARRINHO 04"
             id: res_carrinho_04_btn
             on_release: root.sel_carrinho('4')
@@ -105,7 +105,7 @@
             color: 0.91, 0.94, 0.56, 1
             pos_hint: {"right": 0.6, "top": 0.35}
             size_hint: 0.5, 0.075
-            font_size: 24
+            font_size: dp(24)
             text: "CARRINHO 05"
             id: res_carrinho_05_btn
             on_release: root.sel_carrinho('5')
@@ -113,43 +113,50 @@
 
         # image car_01 check
         Image:
-            pos_hint: {"right": 1.175, "top": 1.215}
+            pos_hint: {"right": 1.25, "top": 1.215}
             size_hint: 1, 1
             id: car01_check
             source: root.check_1
         # image car_02 check
         Image:
-            pos_hint: {"right": 1.175, "top": 1.115}
+            pos_hint: {"right": 1.25, "top": 1.115}
             size_hint: 1, 1
             id: car02_check
             source: root.check_2
         # image car_03 check
         Image:
-            pos_hint: {"right": 1.175, "top": 1.015}
+            pos_hint: {"right": 1.25, "top": 1.015}
             size_hint: 1, 1
             id: car03_check
             source: root.check_3
         # image car_04 check
         Image:
-            pos_hint: {"right": 1.175, "top": 0.915}
+            pos_hint: {"right": 1.25, "top": 0.915}
             size_hint: 1, 1
             id: car04_check
             source: root.check_4
         # image car_05 check
         Image:
-            pos_hint: {"right": 1.175, "top": 0.815}
+            pos_hint: {"right": 1.25, "top": 0.815}
             size_hint: 1, 1
             id: car05_check
             source: root.check_5
 
         # label_local_parada
         Label:
-            pos_hint: {"right": 1, "top": 0.285}
-            size_hint: 1, 0.2
-            font_size: 24
+            canvas.before:
+                Color:
+                    rgba: (0, 0, 0, 0.45)
+                RoundedRectangle:
+                    size: self.width , self.height
+                    pos: self.x, self.y
+                    radius: [15]
+            pos_hint: {"right": 0.95, "top": 0.235}
+            size_hint: 0.675, 0.05
+            font_size: dp(20)
             color: 0.91, 0.94, 0.56, 1
             bold: True
-            valign: 'middle'
+            valign: "middle"
             text: root.label_parada
             id: label_local_parada
 
@@ -162,12 +169,12 @@
                     pos: self.pos
                     radius: [20]
             background_color: (0, 0, 0, 0)
-            text: 'VOLTAR'
+            text: '<'
             font_name: "righteous"
             bold: True
-            font_size: 16
+            font_size: dp(50)
             color: 0, 0, 0, 1
-            pos_hint: {"right": 0.3, "top": 0.205}
-            size_hint: 0.15, 0.05
+            pos_hint: {"right": 0.2, "top": 0.25}
+            size_hint: 0.175, 0.075
             id: voltar_botao_res_carrinho
             on_press: root.voltar_rota()
