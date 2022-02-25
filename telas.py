@@ -2076,21 +2076,21 @@ class Rota01Page(Screen):
             app.root.ids['rescarrinhopage'].mudar_label(parada)
             app.mudar_tela('rescarrinhopage')
         elif parada.split(' ')[1] == 'P02':
-            setores = ['R01 C81MS060', 'R01 C81PA110']
+            setores = ['R01 C81MS060', 'R01 C81PA110', 'R01 C81MS050', 'R01 C81PA020']
             for c in range(1, 6):
                 app.root.ids[f'resladodir{c}page'].mudar_cor(setores)
                 app.root.ids[f'resladoesq{c}page'].mudar_cor(setores)
             app.root.ids['rescarrinhopage'].mudar_label(parada)
             app.mudar_tela('rescarrinhopage')
         elif parada.split(' ')[1] == 'P03':
-            setores = ['R01 C81MS050', 'R01 C81MS040', 'R01 C81PA020']
+            setores = ['R01 C81MS040', 'R01 C81MS030']
             for c in range(1, 6):
                 app.root.ids[f'resladodir{c}page'].mudar_cor(setores)
                 app.root.ids[f'resladoesq{c}page'].mudar_cor(setores)
             app.root.ids['rescarrinhopage'].mudar_label(parada)
             app.mudar_tela('rescarrinhopage')
         elif parada.split(' ')[1] == 'P04':
-            setores = ['R01 C81MS030', 'R01 C81MS020', 'R01 C81PA120']
+            setores = ['R01 C81MS020', 'R01 C81PA120']
             for c in range(1, 6):
                 app.root.ids[f'resladodir{c}page'].mudar_cor(setores)
                 app.root.ids[f'resladoesq{c}page'].mudar_cor(setores)
