@@ -6,8 +6,15 @@ from kivy.properties import ColorProperty
 from kivy.app import App
 from kivy.uix.label import Label
 
+# Cada página chama a classe Screen contendo as propriedades dela.
+
+# Página principal, onde os carrinhos são selecionados.
+
+
 class PrincipalPage(Screen):
    pass
+
+# Páginas de seleção de lados. Cada número (SelecLadoXPage) refere-se ao carrinho.
 
 
 class SelecLado1Page(Screen):
@@ -28,6 +35,9 @@ class SelecLado4Page(Screen):
 
 class SelecLado5Page(Screen):
     pass
+
+
+# Página de seleção de andares onde cada andar contém seu lado esquerdo e direito e seu número de carrinho.
 
 
 class SelecAndar1DirPage(Screen):
@@ -69,6 +79,16 @@ class SelecAndar5DirPage(Screen):
 class SelecAndar5EsqPage(Screen):
     pass
 
+# Página de seleção das posições, contendo vários métodos para gravação e abertura do pop-up de seleção de endereço.
+# PS: São várias páginas, referente a cada andar, totalizando 5 em cada lado, 10 em cada carrinho, 50 no total.
+
+
+# Cada texto da posição (texto_a, texto_b, ...) é uma propriedade String da biblioteca Kivy (StringProperty).
+# Com isso a propriedade text no arquivo .kv pode ser modificada.
+
+# As funções de btn_a até btn_d fazem para abrir o pop-up de seleção de endereço
+# As funções de label_a até label_d servem para pegar o endereço específico no pop-up e gravar na página.
+# A função botao_ir serve para abrir o pop-up de confirmação e ir para as rotas.
 
 class SelecPosicao1EsqA1Page(Screen):
     texto_a = StringProperty('...')
@@ -1239,6 +1259,7 @@ class SelecPosicao3DirA5Page(Screen):
         popup = Confirmar()
         popup.open()
 
+
 class SelecPosicao4EsqA1Page(Screen):
     texto_a = StringProperty('...')
     texto_b = StringProperty('...')
@@ -1823,6 +1844,7 @@ class SelecPosicao5EsqA3Page(Screen):
         popup = Confirmar()
         popup.open()
 
+
 class SelecPosicao5DirA3Page(Screen):
     texto_a = StringProperty('...')
     texto_b = StringProperty('...')
@@ -1899,6 +1921,7 @@ class SelecPosicao5EsqA4Page(Screen):
     def botao_ir(self):
         popup = Confirmar()
         popup.open()
+
 
 class SelecPosicao5DirA4Page(Screen):
     texto_a = StringProperty('...')
@@ -2016,16 +2039,35 @@ class SelecPosicao5DirA5Page(Screen):
         popup = Confirmar()
         popup.open()
 
+# Página de escolha das rotas
+
+# A função voltar_botao vai abrir um pop-up para confirmação para voltar sendo assim resetando os dados para padrão.
+
 
 class EscolhaRotaPage(Screen):
     def voltar_botao(self):
         popup = Voltar()
         popup.open()
 
+# Página de escolha das paradas em cada rota, conténdo métodos para separação de setores especificos
+
+# Cada parada deixará os checks padrão em todos os carrinhos
+# E após isso foi separado em uma lista (setores) especificando cada setor naquela parada
+
+# A função parada_sel receberá qual parada está, referência do botão selecionado na rota.
+
+# Se a parada é igual, os setores serão alterados e com esses setores pegarão os endereços que foram apontados nas
+# páginas de seleção e colocar o check verde em sua posição específica.
+# Utilizei as estruturas de repetição para percorrer em cada página de resultado e chamando o método mudar_cor().
 
 class Rota01Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R01 C81MS090', 'R01 C81PA070', 'R01 C81MS070']
             for c in range(1, 6):
@@ -2066,6 +2108,11 @@ class Rota01Page(Screen):
 class Rota0302Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R03 C81FL120', 'R03 C81FL110', 'R03 C81FL210',
                        'R03 C81FL220', 'R03 C81PA050']
@@ -2109,6 +2156,11 @@ class Rota0302Page(Screen):
 class Rota04Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R04 C81FL120', 'R04 C81FL110', 'R04 C81PA030',
                        'R04 C82PA110']
@@ -2151,6 +2203,11 @@ class Rota04Page(Screen):
 class Rota05Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R05 C82PA120', 'R05 C82PA100', 'R05 C82FL240',
                        'R05 C82FL230', 'R05 C82FL220', 'R05 C82FL210', 'R05 C82MS080']
@@ -2189,11 +2246,14 @@ class Rota05Page(Screen):
             app.mudar_tela('rescarrinhopage')
 
 
-
-
 class Rota0607Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R06 C82MS005', 'R06 C82PA010', 'R06 C82PA030',
                        'R06 C82PA090', 'OUT G08', 'OUT PINTURA']
@@ -2229,6 +2289,11 @@ class Rota0607Page(Screen):
 class Rota08Page(Screen):
     def parada_sel(self, parada):
         app = App.get_running_app()
+        for c in range(1, 6):
+            app.root.ids[f'resladodir{c}page'].cor_padrao()
+            app.root.ids[f'resladoesq{c}page'].cor_padrao()
+            app.root.ids[f'resseleclado{c}page'].padrao()
+        app.root.ids[f'rescarrinhopage'].padrao()
         if parada.split(' ')[1] == 'P01':
             setores = ['R08 SO5700', 'R08 SO5800', 'R08 SO7200', 'R08 SO5900',
                        'R08 SO5100', 'R08 SO5500', 'R08 SO1900', 'R08 SO7100', 'R08 SO0900']
@@ -2277,6 +2342,27 @@ class Rota08Page(Screen):
             app.mudar_tela('rescarrinhopage')
 
 
+# Página de resultado de carrinhos
+
+# Contém seus checks referenciando a qual carrinho está apontado (check_1, check_2)
+
+# A função padrao() definirá os checks como padrão. Utilizado nas escolhas da parada, para resetar os checks padrão.
+
+# A funçao check_padrão() tem o mesmo significado da função acima, pois ela serve para caso 2 ou mais carrinhos
+# estiverem disponíveis, caso o usuário voltar de um carrinho que já tirou todas as embalagens disponíveis, e ir para o
+# próximo carrinho, o carrinho anterior se tornará com check padrão, tornando mais dinâmico.
+
+# A função check_carrinho() receberá qual carrinho está com disponibilidade e tornará o check em positivo.
+
+# A função voltar_rota() serve para o usuário voltar em sua rota específica, a variável label_parada terá referência
+# de qual rota e parada está, com a rota definida ele voltará para a mesma rota em que estava.
+
+# A função mudar_label() receberá a parada_sel da escolha das paradas em cada rota, com isso ela definirá
+# qual referência está e alterando a variável label_parada. Também fará um particionamento da string com método split()
+# para definir a varíável rota.
+
+# A função sel_carrinho() receberá o carrinho com o botão pressionado e mudará para o página do carrinho selecionado
+# e alterando também a propriedade da label_parada.
 
 class ResCarrinhoPage(Screen):
     label_parada = StringProperty('')
@@ -2286,6 +2372,13 @@ class ResCarrinhoPage(Screen):
     check_4 = StringProperty('icones/error.png')
     check_5 = StringProperty('icones/error.png')
     rota = ''
+
+    def padrao(self):
+        self.check_1 = 'icones/error.png'
+        self.check_2 = 'icones/error.png'
+        self.check_3 = 'icones/error.png'
+        self.check_4 = 'icones/error.png'
+        self.check_5 = 'icones/error.png'
 
     def check_padrao(self, carrinho):
         if carrinho == '1':
@@ -2325,7 +2418,6 @@ class ResCarrinhoPage(Screen):
         self.check_4 = 'icones/error.png'
         self.check_5 = 'icones/error.png'
 
-
     def mudar_label(self, parada_sel):
         self.rota = parada_sel.split(' ')[0]
         self.label_parada = f'LOCAL: {parada_sel}'
@@ -2337,11 +2429,34 @@ class ResCarrinhoPage(Screen):
         app.root.ids[f'resladoesq{carrinho}page'].label_local(self.label_parada)
         app.root.ids[f'resladodir{carrinho}page'].label_local(self.label_parada)
 
+# Página de seleção de lados disponíveis
+
+# Terá dois checks, especificando os lados. (check_dir, check_esq)
+
+# O método padrao() definirá os checks em padrão
+
+# O método check_padrao() recebe qual lado foi selecionado, assim o usuário terminado de fazer pagamento em um lado
+# voltando para a seleção de lados, o lado em que ele estava tornará padrão.
+
+# O método check_lado() receberá qual lado tem disponibilidade e tornará o check positivo.
+
+# O método voltar_rota() servirá para voltar a rota específica, mesmo método da classe ResCarrinhoPage() e
+# tornará padrão os checks de lado.
+
+# O método voltar_carrinho() voltará para seleção de carrinhos disponíveis e tornando padrão
+# os checks de lado e do carrinho que estava
+
+# O método label_local() é a referência da rota e parada em que está.
+
 
 class ResSelecLado1Page(Screen):
     label_parada = StringProperty('')
     check_dir = StringProperty('icones/error.png')
     check_esq = StringProperty('icones/error.png')
+
+    def padrao(self):
+        self.check_dir = 'icones/error.png'
+        self.check_esq = 'icones/error.png'
 
     def check_padrao(self, lado):
         if lado == 'dir':
@@ -2384,6 +2499,10 @@ class ResSelecLado2Page(Screen):
     check_dir = StringProperty('icones/error.png')
     check_esq = StringProperty('icones/error.png')
 
+    def padrao(self):
+        self.check_dir = 'icones/error.png'
+        self.check_esq = 'icones/error.png'
+
     def check_padrao(self, lado):
         if lado == 'dir':
             self.check_dir = 'icones/error.png'
@@ -2424,6 +2543,10 @@ class ResSelecLado3Page(Screen):
     label_parada = StringProperty('')
     check_dir = StringProperty('icones/error.png')
     check_esq = StringProperty('icones/error.png')
+
+    def padrao(self):
+        self.check_dir = 'icones/error.png'
+        self.check_esq = 'icones/error.png'
 
     def check_padrao(self, lado):
         if lado == 'dir':
@@ -2466,6 +2589,10 @@ class ResSelecLado4Page(Screen):
     check_dir = StringProperty('icones/error.png')
     check_esq = StringProperty('icones/error.png')
 
+    def padrao(self):
+        self.check_dir = 'icones/error.png'
+        self.check_esq = 'icones/error.png'
+
     def check_padrao(self, lado):
         if lado == 'dir':
             self.check_dir = 'icones/error.png'
@@ -2507,6 +2634,10 @@ class ResSelecLado5Page(Screen):
     check_dir = StringProperty('icones/error.png')
     check_esq = StringProperty('icones/error.png')
 
+    def padrao(self):
+        self.check_dir = 'icones/error.png'
+        self.check_esq = 'icones/error.png'
+
     def check_padrao(self, lado):
         if lado == 'dir':
             self.check_dir = 'icones/error.png'
@@ -2542,6 +2673,28 @@ class ResSelecLado5Page(Screen):
     def label_local(self, parada):
         self.label_parada = parada
 
+
+# Página de resultado dos carrinhos.
+
+# Cada posição do carrinho contém um botão com sua propriedade de cor, padrão em vermelho.
+
+# O método cor_padrão() definirá todas as posições de cor padrão.
+
+# O método mudar_cor() é o método que utilizará para mudar as cores das posições.
+# Primeiro o método percorre em uma estrutura de repetição de cada andar, sendo de 1 a 5, e definirá a variável page,
+# sendo selecposicao1dirA{andar}, após isso, cada andar tem sua posição (A, B, C, D), como já foram definidos acima,
+# como texto_a, texto_b, texto_c e texto_d.
+# Sendo assim, ele validará se o endereço nesse texto é o mesmo que contém na lista de setores, pois o método
+# vai receber a lista de setores onde o método será chamado lá na seleção de paradas das rotas. E com isso ele tornará
+# o check na cor verde, tornando disponível, também mudará o lado em que está selecionado e também o carrinho.
+
+# O método voltar_rota() é o mesmo segmento utilizado antes, porém tornando os checks das posições padrão
+
+# O método voltar_res_carrinho() serve para voltar ao carrinho e tornando os checks padrão.
+
+# O método check_posição() é o comando de cada botão das posições, abrindo um pop-up especificando qual é o endereço.
+
+# O método label_local() é a referência da rota e parada em qual está.
 
 class ResLadoDir1Page(Screen):
     cor_vermelha = (0.99, 0.29, 0.28, 0.93)

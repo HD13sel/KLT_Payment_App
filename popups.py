@@ -5,12 +5,19 @@ from kivy.properties import StringProperty
 from kivy.app import App
 
 
-# confirmar
+# Pop-up Confirmar
+
+# Confirmação após o botão 'PRONTO'
+# Faz confirmação mudando a tela com o método principal mudar_tela()
 class Confirmar(Popup):
     pass
 
 
-# voltar
+# Pop-up Voltar
+
+# Voltar da página escolha das rotas
+
+# O método voltar_botão(), fazerá que todas as posições em cada carrinho serão resetados para padrão
 class Voltar(Popup):
     txt = '...'
 
@@ -34,8 +41,12 @@ class Voltar(Popup):
         app.mudar_tela('principalpage')
 
 
+# Pop-up LocalRegiao
 
-# sel_local_regiao
+# Aparecerá após selecionar a posição, com ele vai definir qual endereço está nessa posição (C81, C82, SOLDA, OUTROS)
+# E cada botão é um método de referência a região, abrindo outro pop-up, pois cada classe chama a classe Popup.
+
+# O método apagar serve para tornar aquela posição com o texto padrão.
 class SelLocalRegiao(Popup):
     def c81(self):
         SelLocalRotasC81().open()
@@ -56,7 +67,10 @@ class SelLocalRegiao(Popup):
         destino.open()
 
 
-# c81
+# Pop-up C81
+
+# Cada rota do setor abrirá o pop-up próprio.
+# O método voltar_'setor'() voltará no pop-up anterior em que estava.
 class SelLocalRotasC81(Popup):
     def c81_r01(self):
         SelLocalRotasC81R01().open()
@@ -74,7 +88,7 @@ class SelLocalRotasC81(Popup):
         SelLocalRegiao().open()
 
 
-# c82
+# Pop-up C82
 class SelLocalRotasC82(Popup):
     def c82_r04(self):
         SelLocalRotasC82R04().open()
@@ -91,7 +105,12 @@ class SelLocalRotasC82(Popup):
     def voltar_c82(self):
         SelLocalRegiao().open()
 
-# solda
+
+# Pop-up SOLDA
+
+# No setor da solda, cada endereço foi ordenado, contendo no seu arquivo .kv um ScrollView para tornar mais dinâmico.
+# O método escolha_solda() receberá qual botão foi pressionado nos endereços disponíveis
+# e enviará para o Pop-up SelLocal(). Com sua formatação de endereço.
 class SelLocalRotasSolda(Popup):
     def escolha_solda(self, btn_id):
         text = btn_id.text
@@ -104,7 +123,9 @@ class SelLocalRotasSolda(Popup):
         SelLocalRegiao().open()
 
 
-# outros
+# Pop-up Outros
+
+# Na região de outros, são especificado setores como Pintura e área RIP G08.
 class SelLocalRotasOutros(Popup):
     def escolha_out(self, btn_id):
         text = btn_id.text
@@ -117,7 +138,7 @@ class SelLocalRotasOutros(Popup):
         SelLocalRegiao().open()
 
 
-# c81 - r01
+# Pop-up R01-C81
 class SelLocalRotasC81R01(Popup):
     def escolha_c81_r01(self, btn_id):
         text = btn_id.text
@@ -130,7 +151,7 @@ class SelLocalRotasC81R01(Popup):
         SelLocalRotasC81().open()
 
 
-# c81 - r02
+# Pop-up R02-C81
 class SelLocalRotasC81R02(Popup):
     def escolha_c81_r02(self, btn_id):
         text = btn_id.text
@@ -143,7 +164,7 @@ class SelLocalRotasC81R02(Popup):
         SelLocalRotasC81().open()
 
 
-# c81 - r03
+# Pop-up R03-C81
 class SelLocalRotasC81R03(Popup):
     def escolha_c81_r03(self, btn_id):
         text = btn_id.text
@@ -156,7 +177,7 @@ class SelLocalRotasC81R03(Popup):
         SelLocalRotasC81().open()
 
 
-# c81 - r04
+# Pop-up R04-C81
 class SelLocalRotasC81R04(Popup):
     def escolha_c81_r04(self, btn_id):
         text = btn_id.text
@@ -168,7 +189,7 @@ class SelLocalRotasC81R04(Popup):
     def voltar_local_c81_r04(self):
         SelLocalRotasC81().open()
 
-# c82 - r04
+# Pop-up R04-C82
 class SelLocalRotasC82R04(Popup):
     def escolha_c82_r04(self, btn_id):
         text = btn_id.text
@@ -180,7 +201,7 @@ class SelLocalRotasC82R04(Popup):
     def voltar_local_c82_r04(self):
         SelLocalRotasC82().open()
 
-# c82 - r05
+# Pop-up R05-C82
 class SelLocalRotasC82R05(Popup):
     def escolha_c82_r05(self, btn_id):
         text = btn_id.text
@@ -192,7 +213,7 @@ class SelLocalRotasC82R05(Popup):
     def voltar_local_c82_r05(self):
         SelLocalRotasC82().open()
 
-# c82 - r06
+# Pop-up R06-C82
 class SelLocalRotasC82R06(Popup):
     def escolha_c82_r06(self, btn_id):
         text = btn_id.text
@@ -205,7 +226,7 @@ class SelLocalRotasC82R06(Popup):
         SelLocalRotasC82().open()
 
 
-# c82 - r07
+# Pop-up R07-C82
 class SelLocalRotasC82R07(Popup):
     def escolha_c82_r07(self, btn_id):
         text = btn_id.text
@@ -218,6 +239,13 @@ class SelLocalRotasC82R07(Popup):
         SelLocalRotasC82().open()
 
 
+# Pop-up SelLocal
+
+# O método voltar_local() fará um particionamento da string para separar a rota e a linha.
+# Com isso, utilizando um estrutura condicional fará o retorno específico na rota/linha em que estava.
+
+# O método sel_ok() é o método onde vai pegar o texto do endereço selecionado e modificará o texto que está na página
+# das posições do carrinho.
 class SelLocal(Popup):
     def voltar_local(self):
         text = self.ids['end_selec'].text
@@ -255,10 +283,6 @@ class SelLocal(Popup):
         btn_text = app.text_pos
         end_selec = self.ids['end_selec'].text
         page = app.root.ids[f'{tela}']
-        # carrinho = tela[12]
-        # lado = tela[13:16]
-        # andar = tela[16:]
-        # respage = app.root.ids[f'reslado{lado}page']
         if 'a' in btn_text:
             page.label_a(end_selec)
         elif 'b' in btn_text:
@@ -269,6 +293,11 @@ class SelLocal(Popup):
             page.label_d(end_selec)
 
 
+# Pop-up ResCheck
+
+# Mostrará qual endereço está na posição do carrinho, na página de resultados dos carrinhos.
+
+# O método mudar_texto() receberá o texto do botão pressionado e mudará o texto.
 class ResCheck(Popup):
     texto = StringProperty('')
 
