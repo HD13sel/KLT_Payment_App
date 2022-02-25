@@ -6,4 +6,8 @@ Após o mapeamento, o aplicativo também terá funcionalidade de uma mapa de loc
 
 Aplicativo feito com a biblioteca Kivy e com a linguagem de programação Python 3.8
 
+![Screenshot_2022-02-24-02-44-32-566_org klt_payment klt_payment](https://user-images.githubusercontent.com/64044658/155758216-e2b000e1-4c3e-4e7a-a621-7ba5e40e26c5.jpg)
+![Screenshot_2022-02-24-02-51-54-129_org klt_payment klt_payment](https://user-images.githubusercontent.com/64044658/155758273-3a59d3b4-a06a-4ca7-9c09-b010ec1ddacb.jpg)
+
+
 Henrique Diesel
