@@ -1,12 +1,13 @@
 # confirmar
 <Confirmar>
+    title_size: dp(16)
     title: 'CONFIRMAÇÃO'
     bold: True
     title_align: 'center'
     size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.68, 0.70, 0.75, 1
     FloatLayout:
         Label:
             pos_hint: {"right": 1, "top": 1}
@@ -52,12 +53,13 @@
             on_press: root.dismiss()
 # voltar
 <Voltar>
+    title_size: dp(16)
     title: "DESEJA VOLTAR?"
     title_align: "center"
     size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.68, 0.70, 0.75, 1
     FloatLayout:
         Label:
             pos_hint: {"right": 1, "top": 1}
@@ -104,16 +106,18 @@
 
 # sel_regiao
 <SelLocalRegiao>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.68, 0.70, 0.75, 1
     GridLayout:
         cols: 2
         rows: 4
         Button:
+            font_size: dp(32)
             text: "C81"
             bold: True
             background_color: 0.92, 0.91, 0.38, 1
@@ -122,6 +126,7 @@
             on_release: root.c81()
             id: btn_sellocal_c81
         Button:
+            font_size: dp(32)
             text: "C82"
             bold: True
             background_color: 0.52, 0.93, 0.44, 1
@@ -130,14 +135,16 @@
             on_press: root.dismiss()
             id: btn_sellocal_c82
         Button:
+            font_size: dp(32)
             text: "SOLDA"
             bold: True
-            background_color: 0.788, 0.788, 0.788, 1
-            background_down: "#cecece"
+            background_color: 0.86, 0.58, 0.15, 1
+            background_down: "#cc9137"
             on_release: root.solda()
             on_press: root.dismiss()
             id: btn_sellocal_solda
         Button:
+            font_size: dp(32)
             text: "OUTROS"
             bold: True
             background_color: 0.70, 0.67, 0.76, 1
@@ -151,6 +158,7 @@
                 size_hint: 0.5, 0.5
                 background_color: 0.68, 0.70, 0.75, 1
                 background_down: "#cecece"
+                font_size: dp(16)
                 text: 'APAGAR'
                 bold: True
                 on_release: root.apagar()
@@ -160,6 +168,7 @@
                 size_hint: 0.75, 0.5
                 background_color: 0.92, 0.48, 0.44, 1
                 background_down: "#e8f186"
+                font_size: dp(16)
                 text: 'CANCELAR'
                 bold: True
                 on_press: root.dismiss()
@@ -168,8 +177,9 @@
 # c81
 <SelLocalRotasC81>
     title: "SELECIONE"
+    title_size: dp(16)
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
     separator_color: 0.91, 0.94, 0.56, 1
@@ -178,13 +188,16 @@
         rows: 6
 
         Label:
+            font_size: dp(24)
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             text: "C81"
             bold: True
 
         Button:
+            font_size: dp(32)
             text: "R01"
             bold: True
             background_color: 0.92, 0.91, 0.38, 1
@@ -193,6 +206,7 @@
             on_press: root.dismiss()
             id: btn_c81_r01
         Button:
+            font_size: dp(32)
             text: "R02"
             bold: True
             background_color: 0.92, 0.91, 0.38, 1
@@ -201,6 +215,7 @@
             on_press: root.dismiss()
             id: btn_c81_r02
         Button:
+            font_size: dp(32)
             text: "R03"
             bold: True
             background_color: 0.92, 0.91, 0.38, 1
@@ -209,6 +224,7 @@
             on_press: root.dismiss()
             id: btn_c81_r03
         Button:
+            font_size: dp(32)
             text: "R04"
             bold: True
             background_color: 0.92, 0.91, 0.38, 1
@@ -218,6 +234,7 @@
             id: btn_c81_r04
         FloatLayout:
             Button:
+                font_size: dp(32)
                 pos_hint: {"right": 1.45, "top": 0.5}
                 size_hint: 1, 0.5
                 background_color: 0.92, 0.48, 0.44, 1
@@ -231,23 +248,27 @@
 # c82
 <SelLocalRotasC82>
     title: "SELECIONE"
+    title_size: dp(16)
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.52, 0.93, 0.44, 1
     GridLayout:
         cols: 2
         rows: 6
 
         Label:
+            font_size: dp(24)
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             text: "C82"
             bold: True
 
         Button:
+            font_size: dp(32)
             text: "R04"
             bold: True
             background_color: 0.52, 0.93, 0.44, 1
@@ -256,6 +277,7 @@
             on_press: root.dismiss()
             id: btn_c82_r04
         Button:
+            font_size: dp(32)
             text: "R05"
             bold: True
             background_color: 0.52, 0.93, 0.44, 1
@@ -264,6 +286,7 @@
             on_press: root.dismiss()
             id: btn_c82_r05
         Button:
+            font_size: dp(32)
             text: "R06"
             bold: True
             background_color: 0.52, 0.93, 0.44, 1
@@ -272,6 +295,7 @@
             on_press: root.dismiss()
             id: btn_c82_r06
         Button:
+            font_size: dp(32)
             text: "R07"
             bold: True
             background_color: 0.52, 0.93, 0.44, 1
@@ -281,6 +305,7 @@
             id: btn_c82_r07
         FloatLayout:
             Button:
+                font_size: dp(32)
                 pos_hint: {"right": 1.45, "top": 0.5}
                 size_hint: 1, 0.5
                 background_color: 0.92, 0.48, 0.44, 1
@@ -293,24 +318,27 @@
 
 # solda
 <SelLocalRotasSolda>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.86, 0.58, 0.15, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.75, "top": 1}
             size_hint: 1, 0.2
             text: "ENDEREÇO:"
             bold: True
-
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1.20, "top": 1}
             size_hint: 1, 0.2
             text: "SO"
             bold: True
+
         GridLayout:
             pos_hint: {"right": 1, "top": 0.825}
             size_hint_x: 1
@@ -333,110 +361,121 @@
 
                     # btn so_0100
                     Button:
+                        font_size: dp(16)
                         text: "0100"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0100)
                         on_press: root.dismiss()
                         id: btn_so_0100
 
                     # btn so_01a0
                     Button:
+                        font_size: dp(16)
                         text: "01A0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_01a0)
                         on_press: root.dismiss()
                         id: btn_so_01a0
 
                     # btn so_01e0
                     Button:
+                        font_size: dp(16)
                         text: "01E0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_01e0)
                         on_press: root.dismiss()
                         id: btn_so_01e0
 
                     # btn so_01d0
                     Button:
+                        font_size: dp(16)
                         text: "01D0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_01d0)
                         on_press: root.dismiss()
                         id: btn_so_01d0
 
                     # btn so_0200
                     Button:
+                        font_size: dp(16)
                         text: "0200"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0200)
                         on_press: root.dismiss()
                         id: btn_so_0200
 
                     # btn so_02a0
                     Button:
+                        font_size: dp(16)
                         text: "02A0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_02a0)
                         on_press: root.dismiss()
                         id: btn_so_02a0
 
                     # btn so_0500
                     Button:
+                        font_size: dp(16)
                         text: "0500"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0500)
                         on_press: root.dismiss()
                         id: btn_so_0500
 
                     # btn so_0600
                     Button:
+                        font_size: dp(16)
                         text: "0600"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0600)
                         on_press: root.dismiss()
                         id: btn_so_0600
 
                     # btn so_0700
                     Button:
+                        font_size: dp(16)
                         text: "0700"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0700)
                         on_press: root.dismiss()
                         id: btn_so_0700
 
                     # btn so_0800
                     Button:
+                        font_size: dp(16)
                         text: "0800"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0800)
                         on_press: root.dismiss()
                         id: btn_so_0800
 
                     # btn so_0900
                     Button:
+                        font_size: dp(16)
                         text: "0900"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_0900)
                         on_press: root.dismiss()
                         id: btn_so_0900
@@ -459,110 +498,121 @@
 
                     # btn so_1000
                     Button:
+                        font_size: dp(16)
                         text: "1000"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
-                        on_release: root.escolha(btn_so_1000)
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
+                        on_release: root.escolha_solda(btn_so_1000)
                         on_press: root.dismiss()
                         id: btn_so_1000
 
                     # btn so_1200
                     Button:
+                        font_size: dp(16)
                         text: "1200"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
-                        on_release: root.escolha(btn_so_1200)
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
+                        on_release: root.escolha_solda(btn_so_1200)
                         on_press: root.dismiss()
                         id: btn_so_1200
 
                     # btn so_1300
                     Button:
+                        font_size: dp(16)
                         text: "1300"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1300)
                         on_press: root.dismiss()
                         id: btn_so_1300
 
                     # btn so_1400
                     Button:
+                        font_size: dp(16)
                         text: "1400"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1400)
                         on_press: root.dismiss()
                         id: btn_so_1400
 
                     # btn so_1500
                     Button:
+                        font_size: dp(16)
                         text: "1500"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1500)
                         on_press: root.dismiss()
                         id: btn_so_1500
 
                     # btn so_1600
                     Button:
+                        font_size: dp(16)
                         text: "1600"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1600)
                         on_press: root.dismiss()
                         id: btn_so_1600
 
                     # btn so_16a0
                     Button:
+                        font_size: dp(16)
                         text: "16A0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_16a0)
                         on_press: root.dismiss()
                         id: btn_so_16a0
 
                     # btn so_1700
                     Button:
+                        font_size: dp(16)
                         text: "1700"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1700)
                         on_press: root.dismiss()
                         id: btn_so_1700
 
                     # btn so_17a0
                     Button:
+                        font_size: dp(16)
                         text: "17A0"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_17a0)
                         on_press: root.dismiss()
                         id: btn_so_17a0
 
                     # btn so_1800
                     Button:
+                        font_size: dp(16)
                         text: "1800"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1800)
                         on_press: root.dismiss()
                         id: btn_so_1800
 
                     # btn so_1900
                     Button:
+                        font_size: dp(16)
                         text: "1900"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_1900)
                         on_press: root.dismiss()
                         id: btn_so_1900
@@ -584,100 +634,110 @@
 
                     # btn so_5000
                     Button:
+                        font_size: dp(16)
                         text: "5000"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5000)
                         on_press: root.dismiss()
                         id: btn_so_5000
 
                     # btn so_5100
                     Button:
+                        font_size: dp(16)
                         text: "5100"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5100)
                         on_press: root.dismiss()
                         id: btn_so_5100
 
                     # btn so_5200
                     Button:
+                        font_size: dp(16)
                         text: "5200"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5200)
                         on_press: root.dismiss()
                         id: btn_so_5200
 
                     # btn so_5300
                     Button:
+                        font_size: dp(16)
                         text: "5300"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5300)
                         on_press: root.dismiss()
                         id: btn_so_5300
 
                     # btn so_5400
                     Button:
+                        font_size: dp(16)
                         text: "5400"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5400)
                         on_press: root.dismiss()
                         id: btn_so_5400
 
                     # btn so_5500
                     Button:
+                        font_size: dp(16)
                         text: "5500"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5500)
                         on_press: root.dismiss()
                         id: btn_so_5500
 
                     # btn so_5600
                     Button:
+                        font_size: dp(16)
                         text: "5600"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5600)
                         on_press: root.dismiss()
                         id: btn_so_5600
 
                     # btn so_5700
                     Button:
+                        font_size: dp(16)
                         text: "5700"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5700)
                         on_press: root.dismiss()
                         id: btn_so_5700
 
                     # btn so_5800
                     Button:
+                        font_size: dp(16)
                         text: "5800"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5800)
                         on_press: root.dismiss()
                         id: btn_so_5800
 
                     # btn so_5900
                     Button:
+                        font_size: dp(16)
                         text: "5900"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_5900)
                         on_press: root.dismiss()
                         id: btn_so_5900
@@ -699,66 +759,73 @@
 
                     # btn so_6000
                     Button:
+                        font_size: dp(16)
                         text: "6000"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_6000)
                         on_press: root.dismiss()
                         id: btn_so_6000
 
                     # btn so_7000
                     Button:
+                        font_size: dp(16)
                         text: "7000"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_7000)
                         on_press: root.dismiss()
                         id: btn_so_7000
 
                     # btn so_7100
                     Button:
+                        font_size: dp(16)
                         text: "7100"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_7100)
                         on_press: root.dismiss()
                         id: btn_so_7100
 
                     # btn so_7200
                     Button:
+                        font_size: dp(16)
                         text: "7200"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_7200)
                         on_press: root.dismiss()
                         id: btn_so_7200
 
                     # btn so_7300
                     Button:
+                        font_size: dp(16)
                         text: "7300"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_7300)
                         on_press: root.dismiss()
                         id: btn_so_7300
 
                     # btn so_7500
                     Button:
+                        font_size: dp(16)
                         text: "7500"
                         bold: True
-                        background_color: 0.788, 0.788, 0.788, 1
-                        background_down: "#cecece"
+                        background_color: 0.86, 0.58, 0.15, 1
+                        background_down: "#e8f186"
                         on_release: root.escolha_solda(btn_so_7500)
                         on_press: root.dismiss()
                         id: btn_so_7500
 
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -772,24 +839,28 @@
 
 # outros
 <SelLocalRotasOutros>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.70, 0.67, 0.76, 1
     GridLayout:
         cols: 2
         rows: 3
 
         Label:
+            font_size: dp(24)
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             text: "OUT"
             bold: True
 
         Button:
+            font_size: dp(16)
             text: "PINTURA"
             bold: True
             background_color: 0.70, 0.67, 0.76, 1
@@ -798,6 +869,7 @@
             on_press: root.dismiss()
             id: btn_out_pintura
         Button:
+            font_size: dp(16)
             text: "G08"
             bold: True
             background_color: 0.70, 0.67, 0.76, 1
@@ -808,6 +880,7 @@
 
         FloatLayout:
             Button:
+                font_size: dp(32)
                 pos_hint: {"right": 1.45, "top": 0.5}
                 size_hint: 1, 0.5
                 background_color: 0.92, 0.48, 0.44, 1
@@ -820,19 +893,22 @@
 
 # c81 r01
 <SelLocalRotasC81R01>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.92, 0.91, 0.38, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R01 C81"
@@ -845,6 +921,7 @@
 
             #r01pa010
             Button:
+                font_size: dp(16)
                 text: "PA010"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -855,6 +932,7 @@
 
             #r01pa020
             Button:
+                font_size: dp(16)
                 text: "PA020"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -865,6 +943,7 @@
 
             #r01pa070
             Button:
+                font_size: dp(16)
                 text: "PA070"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -875,6 +954,7 @@
 
             #r01pa110
             Button:
+                font_size: dp(16)
                 text: "PA110"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -885,6 +965,7 @@
 
             #r01pa120
             Button:
+                font_size: dp(16)
                 text: "PA120"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -895,6 +976,7 @@
 
             #r01ms010
             Button:
+                font_size: dp(16)
                 text: "MS010"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -905,6 +987,7 @@
 
             #r01ms020
             Button:
+                font_size: dp(16)
                 text: "MS020"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -915,6 +998,7 @@
 
             #r01ms030
             Button:
+                font_size: dp(16)
                 text: "MS030"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -925,6 +1009,7 @@
 
             #r01ms040
             Button:
+                font_size: dp(16)
                 text: "MS040"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -935,6 +1020,7 @@
 
             #r01ms050
             Button:
+                font_size: dp(16)
                 text: "MS050"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -945,6 +1031,7 @@
 
             #r01ms060
             Button:
+                font_size: dp(16)
                 text: "MS060"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -955,6 +1042,7 @@
 
             #r01ms070
             Button:
+                font_size: dp(16)
                 text: "MS070"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -965,6 +1053,7 @@
 
             #r01ms090
             Button:
+                font_size: dp(16)
                 text: "MS090"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -974,6 +1063,7 @@
                 id: btn_c81_r01_ms090
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -987,19 +1077,22 @@
 
 # c81 r02
 <SelLocalRotasC81R02>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.92, 0.91, 0.38, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R02 C81"
@@ -1012,6 +1105,7 @@
 
             #r02fl310
             Button:
+                font_size: dp(16)
                 text: "FL310"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1022,6 +1116,7 @@
 
             #r02fl320
             Button:
+                font_size: dp(16)
                 text: "FL320"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1031,6 +1126,7 @@
                 id: btn_c81_r02_fl320
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1045,19 +1141,22 @@
 
 # c81 r03
 <SelLocalRotasC81R03>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.92, 0.91, 0.38, 1
     FloatLayout:
         Label:
+            font_size: dp(16)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(16)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R03 C81"
@@ -1070,6 +1169,7 @@
 
             #r03fl110
             Button:
+                font_size: dp(16)
                 text: "FL110"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1080,6 +1180,7 @@
 
             #r03fl120
             Button:
+                font_size: dp(16)
                 text: "FL120"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1090,6 +1191,7 @@
 
             #r03fl210
             Button:
+                font_size: dp(16)
                 text: "FL210"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1100,6 +1202,7 @@
 
             #r03fl220
             Button:
+                font_size: dp(16)
                 text: "FL220"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1110,6 +1213,7 @@
 
             #r03fl230
             Button:
+                font_size: dp(16)
                 text: "FL230"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1120,6 +1224,7 @@
 
             #r03fl240
             Button:
+                font_size: dp(16)
                 text: "FL240"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1130,6 +1235,7 @@
 
             #r03fl250
             Button:
+                font_size: dp(16)
                 text: "FL250"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1140,6 +1246,7 @@
 
             #r03fl260
             Button:
+                font_size: dp(16)
                 text: "FL260"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1150,6 +1257,7 @@
 
             #r03pa030
             Button:
+                font_size: dp(16)
                 text: "PA030"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1160,6 +1268,7 @@
 
             #r03pa040
             Button:
+                font_size: dp(16)
                 text: "PA040"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1170,6 +1279,7 @@
 
             #r03pa050
             Button:
+                font_size: dp(16)
                 text: "PA050"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1180,6 +1290,7 @@
 
             #r03pa060
             Button:
+                font_size: dp(16)
                 text: "PA060"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1190,6 +1301,7 @@
 
             #r03pa080
             Button:
+                font_size: dp(16)
                 text: "PA080"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1200,6 +1312,7 @@
 
             #r03pa090
             Button:
+                font_size: dp(16)
                 text: "PA090"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1210,6 +1323,7 @@
 
             #r03pa100
             Button:
+                font_size: dp(16)
                 text: "PA100"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1220,6 +1334,7 @@
 
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1233,19 +1348,22 @@
 
 # c81 r04
 <SelLocalRotasC81R04>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.92, 0.91, 0.38, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R04 C81"
@@ -1258,6 +1376,7 @@
 
             #r04fl110
             Button:
+                font_size: dp(16)
                 text: "FL110"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1268,6 +1387,7 @@
 
             #r04fl120
             Button:
+                font_size: dp(16)
                 text: "FL120"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1278,6 +1398,7 @@
 
             #r04fl330
             Button:
+                font_size: dp(16)
                 text: "FL330"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1288,6 +1409,7 @@
 
             #r04pa030
             Button:
+                font_size: dp(16)
                 text: "PA030"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1298,6 +1420,7 @@
 
             #r04pa040
             Button:
+                font_size: dp(16)
                 text: "PA040"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1308,6 +1431,7 @@
 
             #r04pa060
             Button:
+                font_size: dp(16)
                 text: "PA060"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1318,6 +1442,7 @@
 
             #r04pa090
             Button:
+                font_size: dp(16)
                 text: "PA090"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1328,6 +1453,7 @@
 
             #r04pa100
             Button:
+                font_size: dp(16)
                 text: "PA100"
                 bold: True
                 background_color: 0.92, 0.91, 0.38, 1
@@ -1338,6 +1464,7 @@
 
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1351,19 +1478,22 @@
 
 # c82 r04
 <SelLocalRotasC82R04>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.52, 0.93, 0.44, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R04 C82"
@@ -1376,6 +1506,7 @@
 
             #r04pa040
             Button:
+                font_size: dp(16)
                 text: "PA040"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1386,6 +1517,7 @@
 
             #r04pa070
             Button:
+                font_size: dp(16)
                 text: "PA070"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1396,6 +1528,7 @@
 
             #r04pa100
             Button:
+                font_size: dp(16)
                 text: "PA100"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1406,6 +1539,7 @@
 
             #r04pa110
             Button:
+                font_size: dp(16)
                 text: "PA110"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1416,6 +1550,7 @@
 
             #r04pa120
             Button:
+                font_size: dp(16)
                 text: "PA120"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1426,6 +1561,7 @@
 
             #r04fl220
             Button:
+                font_size: dp(16)
                 text: "FL220"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1436,6 +1572,7 @@
 
             #r04fl230
             Button:
+                font_size: dp(16)
                 text: "FL230"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1446,6 +1583,7 @@
 
             #r04fl240
             Button:
+                font_size: dp(16)
                 text: "FL240"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1455,6 +1593,7 @@
                 id: btn_c82_r04_fl240
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1468,19 +1607,22 @@
 
 # c82 r05
 <SelLocalRotasC82R05>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.52, 0.93, 0.44, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R05 C82"
@@ -1493,6 +1635,7 @@
 
             #r05fl210
             Button:
+                font_size: dp(16)
                 text: "FL210"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1503,6 +1646,7 @@
 
             #r05fl220
             Button:
+                font_size: dp(16)
                 text: "FL220"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1513,6 +1657,7 @@
 
             #r05fl230
             Button:
+                font_size: dp(16)
                 text: "FL230"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1523,6 +1668,7 @@
 
             #r05fl240
             Button:
+                font_size: dp(16)
                 text: "FL240"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1533,6 +1679,7 @@
 
             #r05pa010
             Button:
+                font_size: dp(16)
                 text: "PA010"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1543,6 +1690,7 @@
 
             #r05pa020
             Button:
+                font_size: dp(16)
                 text: "PA020"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1553,6 +1701,7 @@
 
             #r05pa050
             Button:
+                font_size: dp(16)
                 text: "PA050"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1563,6 +1712,7 @@
 
             #r05pa060
             Button:
+                font_size: dp(16)
                 text: "PA060"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1573,6 +1723,7 @@
 
             #r05pa080
             Button:
+                font_size: dp(16)
                 text: "PA080"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1583,6 +1734,7 @@
 
             #r05pa100
             Button:
+                font_size: dp(16)
                 text: "PA100"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1593,6 +1745,7 @@
 
             #r05pa130
             Button:
+                font_size: dp(16)
                 text: "PA130"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1603,6 +1756,7 @@
 
             #r05pa120
             Button:
+                font_size: dp(16)
                 text: "PA120"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1613,6 +1767,7 @@
 
             #r05ms005
             Button:
+                font_size: dp(16)
                 text: "MS005"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1623,6 +1778,7 @@
 
             #r05ms010
             Button:
+                font_size: dp(16)
                 text: "MS010"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1633,6 +1789,7 @@
 
             #r05ms020
             Button:
+                font_size: dp(16)
                 text: "MS020"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1643,6 +1800,7 @@
 
             #r05ms030
             Button:
+                font_size: dp(16)
                 text: "MS030"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1653,6 +1811,7 @@
 
             #r05ms040
             Button:
+                font_size: dp(16)
                 text: "MS040"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1663,6 +1822,7 @@
 
             #r05ms050
             Button:
+                font_size: dp(16)
                 text: "MS050"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1673,6 +1833,7 @@
 
             #r05ms080
             Button:
+                font_size: dp(16)
                 text: "MS080"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1682,6 +1843,7 @@
                 id: btn_c82_r05_ms080
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1695,19 +1857,22 @@
 
 # c82 r06
 <SelLocalRotasC82R06>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.52, 0.93, 0.44, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R06 C82"
@@ -1720,6 +1885,7 @@
 
             #r06pa010
             Button:
+                font_size: dp(16)
                 text: "PA010"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1730,6 +1896,7 @@
 
             #r06pa030
             Button:
+                font_size: dp(16)
                 text: "PA030"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1740,6 +1907,7 @@
 
             #r06pa090
             Button:
+                font_size: dp(16)
                 text: "PA090"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1750,6 +1918,7 @@
 
             #r06fl110
             Button:
+                font_size: dp(16)
                 text: "FL110"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1760,6 +1929,7 @@
 
             #r06fl120
             Button:
+                font_size: dp(16)
                 text: "FL120"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1770,6 +1940,7 @@
 
             #r06fl130
             Button:
+                font_size: dp(16)
                 text: "FL130"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1780,6 +1951,7 @@
 
             #r06ms005
             Button:
+                font_size: dp(16)
                 text: "MS005"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1790,6 +1962,7 @@
 
             #r06ms010
             Button:
+                font_size: dp(16)
                 text: "MS010"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1800,6 +1973,7 @@
 
             #r05ms030
             Button:
+                font_size: dp(16)
                 text: "MS030"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1810,6 +1984,7 @@
 
             #r06ms040
             Button:
+                font_size: dp(16)
                 text: "MS040"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1820,6 +1995,7 @@
 
             #r06ms050
             Button:
+                font_size: dp(16)
                 text: "MS050"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1830,6 +2006,7 @@
 
             #r06ms080
             Button:
+                font_size: dp(16)
                 text: "MS080"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1840,6 +2017,7 @@
 
             #r06ms090
             Button:
+                font_size: dp(16)
                 text: "MS090"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1849,6 +2027,7 @@
                 id: btn_c82_r06_ms090
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1862,19 +2041,22 @@
 
 # c82 r07
 <SelLocalRotasC82R07>
+    title_size: dp(16)
     title: "SELECIONE"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.52, 0.93, 0.44, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.5, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
             bold: True
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 1, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "R07 C82"
@@ -1887,6 +2069,7 @@
 
             #r07fl110
             Button:
+                font_size: dp(16)
                 text: "FL110"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1897,6 +2080,7 @@
 
             #r07fl130
             Button:
+                font_size: dp(16)
                 text: "FL130"
                 bold: True
                 background_color: 0.52, 0.93, 0.44, 1
@@ -1906,6 +2090,7 @@
                 id: btn_c82_r07_fl130
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.75, "top": 0.15}
             size_hint: 0.5, 0.1
             background_color: 0.92, 0.48, 0.44, 1
@@ -1918,14 +2103,16 @@
 
 # sel local
 <SelLocal>
+    title_size: dp(16)
     title: "CONFIRMAR"
     title_align: "center"
-    size: (1200, 1000)
+    size: (1200, 1500)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.68, 0.70, 0.75, 1
     FloatLayout:
         Label:
+            font_size: dp(24)
             pos_hint: {"right": 0.75, "top": 1.1}
             size_hint: 0.5, 0.5
             text: "ENDEREÇO:"
@@ -1939,6 +2126,7 @@
             id: end_selec
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 0.5, "top": 0.25}
             size_hint: 0.5, 0.2
             background_color: 0.92, 0.48, 0.44, 1
@@ -1950,6 +2138,7 @@
             id: btn_sel_local_voltar
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 1, "top": 0.25}
             size_hint: 0.5, 0.2
             background_color: 0.74, 0.93, 0.40, 1
@@ -1963,12 +2152,13 @@
 
 # res check
 <ResCheck>
+    title_size: dp(16)
     title: "ENDEREÇO"
     title_align: "center"
     size: (1200, 1000)
     size_hint: (None, None)
     auto_dismiss: True
-    separator_color: 0.91, 0.94, 0.56, 1
+    separator_color: 0.68, 0.70, 0.75, 1
     FloatLayout:
         Label:
             pos_hint: {"right": 0.75, "top": 0.85}
@@ -1979,6 +2169,7 @@
             text: root.texto
 
         Button:
+            font_size: dp(32)
             pos_hint: {"right": 1, "top": 0.25}
             size_hint: 1, 0.2
             background_color: 0.74, 0.93, 0.40, 1

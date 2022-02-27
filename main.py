@@ -4,6 +4,7 @@ from kivy.properties import StringProperty
 import telas
 from telas import *
 from popups import *
+from btn_image import *
 from kivy.metrics import dp, sp
 import os
 import certifi
